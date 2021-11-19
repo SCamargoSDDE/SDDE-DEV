@@ -1,0 +1,17 @@
+.color-footer{
+   background-color: #29ABE2;
+}
+
+.t-footer{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.p-footer{
+   text-align: left;
+    color: #FFFFFF;
+}
