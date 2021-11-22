@@ -1,3 +1,9 @@
+.m-footer{
+    text-align: left;
+    width: 244;
+    height: 99;
+}
+
 .color-footer{
    background-color: #29ABE2;
 }
@@ -9,9 +15,16 @@
     font-size: 19px;
     line-height: 18px;
     color: #FFFFFF;
+    text-align: left;
 }
 
 .p-footer{
-   text-align: left;
+    font-family:'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
     color: #FFFFFF;
+    text-align: left;
+    text-decoration: none;
 }
