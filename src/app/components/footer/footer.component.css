@@ -1,3 +1,11 @@
+@font-face {
+    font-family: GothamRounded;
+    src: url('../../../assets/fonts/GothamRounded.ttf') format('truetype');
+}
+body{
+    font-family: GothamRounded;
+}
+
 .m-footer{
     text-align: left;
     width: 244;
@@ -9,7 +17,7 @@
 }
 
 .t-footer{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: GothamRounded;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
@@ -19,7 +27,7 @@
 }
 
 .p-footer{
-    font-family:'Times New Roman', Times, serif;
+    font-family: GothamRounded;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
