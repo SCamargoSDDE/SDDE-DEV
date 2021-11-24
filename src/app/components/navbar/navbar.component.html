@@ -1,36 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand a-img" href="#">
-          <img src="./assets/img/Logo.png" alt="Logo">
-          </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/faq']">Quíenes Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/programs']">Programas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Directorio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Eventos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Noticias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CEmprende</a>
-          </li>
-        </ul>
-      </div>
+<div class="login">
+  <div class="hstack gap-3">
+    <div class="ms-auto">
+      <a class="a-unstyled"
+          [routerLink]="['/register']"><button type="button" class="btn btn-fucsia mt-2"> Registrarse</button></a>
     </div>
-  </nav>
+    <div class="vr mt-2"></div>
+    <div>
+      <a class="a-unstyled" [routerLink]="['/login']"><button type="button" class="btn btn-azul mt-2">Iniciar sesíon</button></a>
+    </div>
+    <div>
+      <img class="mt-2" src="./assets/icons/search.png" alt="Responsive image">
+    </div>
+    <div>
+
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand a-img" href="#">
+      <img src="./assets/img/Logo.png" alt="Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/faq']">Quíenes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/programs']">Programas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Directorio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CEmprende</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

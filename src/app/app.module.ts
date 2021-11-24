@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { ProgramsComponent } from './components/programs/programs.component';
 import { AdminLayoutComponent } from './components/admin-layout/admin-layout.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AdminLayoutComponent } from './components/admin-layout/admin-layout.com
     HomeComponent,
     FaqComponent,
     ProgramsComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
