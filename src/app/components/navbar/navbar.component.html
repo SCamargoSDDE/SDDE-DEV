@@ -1,29 +1,26 @@
 <div class="login">
   <div class="hstack gap-3">
     <div class="ms-auto">
-      <a class="a-unstyled"
-          [routerLink]="['/register']"><button type="button" class="btn btn-fucsia mt-2"> Registrarse</button></a>
+      <a class="a-unstyled" [routerLink]="['/register']"><button type="button" class="btn btn-fucsia mt-2">
+          Registrarse</button></a>
     </div>
     <div class="vr mt-2"></div>
     <div>
-      <a class="a-unstyled" [routerLink]="['/login']"><button type="button" class="btn btn-azul mt-2">Iniciar sesíon</button></a>
+      <a class="a-unstyled" [routerLink]="['/login']"><button type="button" class="btn btn-azul mt-2">Iniciar
+          sesíon</button></a>
     </div>
-    <div>
-      <img class="mt-2" src="./assets/icons/search.png" alt="Responsive image">
-    </div>
+
+    <img class="mt-2" src="./assets/icons/search.png" alt="Responsive image">
+
     <div>
 
     </div>
   </div>
 </div>
 
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand a-img" href="#">
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/inicio']">
       <img src="./assets/img/Logo.png" alt="Logo">
     </a>
 
@@ -34,7 +31,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav mx-auto mr-auto">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link" aria-current="page" [routerLink]="['/inicio']">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/faq']">Quíenes Somos</a>
