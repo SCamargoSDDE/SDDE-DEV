@@ -7,19 +7,57 @@ body{
 }
 
 .img-page{
-    
-    background: linear-gradient(0deg, rgba(41, 171, 226, 0.3318) 1.66%, rgba(41, 171, 226, 0) 75.26%);
+    background-image: url("../../../assets/img/one-person.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 553px;
+    width: 100%;
+    opacity: linear-gradient(0deg, rgba(41, 171, 226, 0.3318) 1.66%, rgba(41, 171, 226, 0) 75.26%);
 }
 
+.card-img{
+    height: 250px;
+    width: 280px;
+    margin-top: 10%;
+    position: absolute;
+    margin-left: 10%;
+}
+.c-1{
+    background-color: #ED1E79;
+    height:50%;
+    color:#FFFFFF;
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: 325;
+    font-size: 34.5874px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 11.5291px 11.5291px 0px 0px;
+}
+
+.c-2{
+    background-color: #29ABE2;
+    height:25%;
+    color:#FFFFFF;
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: 325;
+    font-size: 34.5874px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 0px 0px  4.80381px 4.80381px;
+}
+.card-body{
+    
+    border:none;
+}
 .line{
     background: #ED1E79;
     width: 100%;
-    height: 110.51px;
-}
-.p-line{
-    position: absolute;
-    width: 100%;
-    height: 76.35px;
+    height: 115px;
+    position: relative;
+
     font-style: normal;
     font-family: GothamRounded;
     font-weight: 325;
@@ -28,14 +66,32 @@ body{
     text-align: center;
     color: #FFFFFF;
 }
+.spacing{
+    width: 100% ;
+    height: 10px;
+}
+.card-body{
+    margin: auto;
+    margin-top: 20%;
+}
+.c-zise{
+    width: 380px;
+    height: 350px;
+    border-radius: 30px;
+}
+.opacity{
+    background: rgba(41, 171, 226, 0.55);
+    border-radius: 30px;
+}
 
 .c-emprendedores{
     background-image: url("../../../assets/img/Rectangle10.png");
     background-repeat: no-repeat;
-    border-radius: 30px;
     width: 380px;
     height: 212.93px;
     color: #FFFFFF;
+    border:none;
+    opacity: 0.6;
 }
 
 .c-inversionistas{
@@ -45,20 +101,10 @@ body{
     width: 380px;
     height: 212.93px;
     color: #FFFFFF;
+    border:none;
+    opacity: 0.6;
 }
 
-.c-bajo{
-    text-align: center;
-    margin-top: 20px;
-    color: #21539B;
-}
-.c-hr{
-    background-color: #21539B;
-    color: #21539B;
-    width: 50%;
-    height: 2px;
-    margin: auto;
-}
 .c-aceleradores{
     background-image: url("../../../assets/img/Rectangle16.png");
     background-repeat: no-repeat;
@@ -66,6 +112,22 @@ body{
     width: 380px;
     height: 212.93px;
     color: #FFFFFF;
+    border:none;
+    opacity: 0.6;
+}
+
+.c-bajo{
+    text-align: center;
+    margin-top: 20px;
+    color: #21539B;
+}
+
+.c-hr{
+    background-color: #21539B;
+    color: #21539B;
+    width: 50%;
+    height: 2px;
+    margin: auto;
 }
 .c-text{
     font-family: GothamRounded;
@@ -77,13 +139,23 @@ body{
     align-items: center;
     text-align: center;
     color: #FFFFFF;
+    z-index: 0;
 }
+.c-text-bold {
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+  }
 .h-azul{
     font-family: GothamRounded;
     font-style: normal;
     font-weight: bold;
     font-size: 50px;
-    line-height: 21px;
+    line-height: 45px;
     display: flex;
     align-items: center;
     text-align: center;
