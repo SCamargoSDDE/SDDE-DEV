@@ -77,3 +77,7 @@ body{
 .a-unstyled{
     text-decoration:none;
 }
+
+.center-col{
+    text-align: center;
+}
