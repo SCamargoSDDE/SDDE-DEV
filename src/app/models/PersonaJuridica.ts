@@ -1,16 +1,14 @@
-import { personas } from "./Personas";
+import { Persona } from "./persona";
+import { PersonaContacto } from "./personaContacto";
 
-export class tiposDocumentosIdentidad {
-    persId: number;
-    pejuRazonSocial: string;
-    pejuNombreContacto: string;
-    pejuMision: string;
-    pejuVison: string;
-    pejuCargoContacto: string;
-    pejuTelCelContacto: string;
-    pejuFechaInicioEmpresa: Date;
-    pejuFechaCreacion: Date;
-    pejuFechaActualizacion: Date;
-    personas: personas
-   
+export class PersonaJuridica {
+    id: number;
+    razonSocial: string;
+    mision: string;
+    vison: string;
+    personaContacto: PersonaContacto;
+    fechaInicioEmpresa: Date;
+    fechaCreacion: Date;
+    fechaActualizacion: Date;
+    persona: Persona;
 }

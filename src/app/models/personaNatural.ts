@@ -1,14 +1,14 @@
-import { personas } from "./Personas";
+import { Persona } from "./persona";
 
-export class personaNatural {
-    persId: number;
-    penaPrimerNombre: String;
-    penaSegundoNombre: String;
-    penaPrimerApellido: String;
-    penaSegundoApellido: String;
-    penaFechaNacimiento: Date;
-    penaFechaCreacion: Date;
-    penaFechaActualizacion: Date;
-    personas: personas;
+export class PersonaNatural {
+    id: number;
+    primerNombre: string;
+    segundoNombre: string;
+    primerApellido: string;
+    segundoApellido: string;
+    fechaNacimiento: Date;
+    /*fechaCreacion: Date;
+    fechaActualizacion: Date;*/
+    persona: Persona;
 }
 
