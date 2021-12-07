@@ -19,7 +19,7 @@ export class RegisterService {
 
   getTipoDocumento() :Observable<TipoDocumentoIdentidad[]>{
     let header = new HttpHeaders().set('Tipe-content', 'aplication/json')
-    const sellersUrl = `${environment.apiUrl}TiposDocumento`;
+    const sellersUrl = `${environment.apiUrl}tiposDocuentoIDen`;
     return this.http.get<TipoDocumentoIdentidad[]>(sellersUrl, {
       headers: header
     });
