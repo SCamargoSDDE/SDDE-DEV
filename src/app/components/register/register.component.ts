@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from 'src/app/services/register.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Persona } from 'src/app/models/persona';
+import { Personas } from 'src/app/models/personas';
 import { TipoDocumentoIdentidad } from 'src/app/models/tipoDocumentoIdentidad';
+import { Usuarios } from 'src/app/models/usuarios';
 
 @Component({
   selector: 'app-register',
@@ -41,7 +42,8 @@ export class RegisterComponent implements OnInit {
       correoElectronico: ['', [Validators.required]],
       confirmacionCorreo: ['', [Validators.required]],
       fechaNacimiento: ['', [Validators.required]],
-      numeroContacto: ['', [Validators.required]],
+      numeroCelular: ['', [Validators.required]],
+      numeroFijo: ['', [Validators.required]],
       contrasena: ['', [Validators.required]],
       confirmarContrasena: ['', [Validators.required]]
     });
@@ -70,52 +72,80 @@ export class RegisterComponent implements OnInit {
     /*se agregar esto para eliminar la observacion de angualr respecto al posible null: "strictNullChecks": false,*/
     this.direccion = this.myForm.get('c1').value + ' ' + this.myForm.get('c2').value + ' ' + this.myForm.get('c3').value + ' ' + this.myForm.get('c4').value + ' ' + this.myForm.get('c5').value + ' ' + this.myForm.get('c6').value + ' # ' + this.myForm.get('c7').value + ' ' + this.myForm.get('c8').value + ' ' + this.myForm.get('c9').value + ' ' + this.myForm.get('c10').value;     
 
-    const registro = {
-      tipoDocumento: this.myForm.get('tipoDocumento').value,
-      numeroDocumento: this.myForm.get('numeroDocumento').value,
-      primerApellido: this.myForm.get('primerApellido').value,
-      segundoApellido: this.myForm.get('segundoApellido').value,
-      primerNombre: this.myForm.get('primerNombre').value,
-      segundoNombre: this.myForm.get('segundoNombre').value,
-      direccion: this.direccion,
-      correoElectronico: this.myForm.get('correoElectronico').value,
-      confirmacionCorreo: this.myForm.get('confirmacionCorreo').value,
-      fechaNacimiento: this.myForm.get('fechaNacimiento').value,
-      numeroContacto: this.myForm.get('numeroContacto').value,
-      contrasena: this.myForm.get('contrasena').value,
-      confirmarContrasena: this.myForm.get('confirmarContrasena').value
+    const Usuarios: any = {
+      usuaId:null,
+      usuaUsuario: null,
+      usuaContrasenia: this.myForm.get('contrasena').value,
+      usuaEstado: "ACTIVO",
+      usuaFechaCreacion: null,
+      usuaFechaActualizacion: null,
+      personas:
+        {
+          persId: null,
+          persFechaActualizacion: null,
+          muniId: null,
+          usuaId: null,
+          personaJuridica: null,
+          persEmprendimientosPasados: null,
+          persBiografia: null,
+          persFechaCreacion: null,
+          persDigitoVerificacion: "1",
+          persDireccion: this.direccion,
+          persNumeroDocumento: this.myForm.get('numeroDocumento').value,
+          persTelCelular : this.myForm.get('numeroCelular').value,
+          persTelFijo: this.myForm.get('numeroFijo').value,
+          persCorreoElectronico: this.myForm.get('correoElectronico').value,
+          tidoId: this.myForm.get('tipoDocumento').value,
+          personaNatural: {
+            penaId: null,
+            penaFechaActualizacion: null,
+            acesId: null,
+            discId: null,
+            gretId: null,
+            grpoId: null,
+            niedId: null,
+            orseId: null,
+            persId: null,
+            penaPrimerNombre: this.myForm.get('primerNombre').value,
+            penaSegundoNombre: this.myForm.get('segundoNombre').value,
+            penaPrimerApellido: this.myForm.get('primerApellido').value,
+            penaSegundoApellido: this.myForm.get('segundoApellido').value,
+            penaFechaNacimiento: this.myForm.get('fechaNacimiento').value,
+            penaFechaCreacion: null,
+          }
+        }
     };
     
-    console.log(registro);
+    console.log(Usuarios);
     
-    /*
-    this.register.registrarEmprendedor(Persona).subscribe(
+    
+    this.register.registrarEmprendedor(Usuarios).subscribe(
       (success => this.onAgregarSuccess(success)),
       (error => this.onAgregarError(error))
     );
-    */
-
+    
   }
-  /*
-  onAgregarSuccess(success){
+  
+  onAgregarSuccess(success: any){
     console.log('Emprendedor registrado');
     
-    this.snackBar.open('El cliente fue registrado con exito!', '', {
+    /*this.snackBar.open('El cliente fue registrado con exito!', '', {
       duration: 3000,
     });
     
     this.route.navigate(['/']);
+    */
   }
-  */
+  
 
-  /*
-  onAgregarError(error){
+  
+  onAgregarError(error: any){
     console.log('incombenientes al registro');
-    
+  /*  
     this.snackBar.open('El cliente no pudo ser registrado verifica los campos!', '', {
       duration: 3000,
     });
-    
+  */  
   }
-  */
+  
 }

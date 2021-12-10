@@ -1,5 +1,5 @@
 import { Departamento } from "./departamentos";
-import { Persona } from "./persona";
+import { Personas } from "./personas";
 
 export class Municipio {
     muniId: string;
@@ -8,6 +8,6 @@ export class Municipio {
     muniFechaCreacion: Date;
     muniFechaActualizacion: Date;
     depaId: Departamento;
-    personasCollection:Persona;
+    personasCollection: Personas;
 }
 

@@ -3,8 +3,9 @@ import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Persona } from '../models/persona';
+import { Personas } from '../models/personas';
 import { TipoDocumentoIdentidad } from '../models/tipoDocumentoIdentidad';
+import { Usuarios } from '../models/usuarios';
 
 @Injectable({
   providedIn: 'root'
@@ -26,9 +27,9 @@ export class RegisterService {
   }
 
 
-  registrarEmprendedor(cliente: Persona) : Observable<Persona>{
+  registrarEmprendedor(cliente: Usuarios) : Observable<Usuarios>{
     const sellersUrl = `${environment.apiUrl}registrar`;
-    return this.http.post<Persona>(sellersUrl, cliente);
+    return this.http.post<Usuarios>(sellersUrl, cliente);
   }
 
 /*  getCliente(index: number): Observable<Cliente>{

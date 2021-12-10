@@ -3,8 +3,8 @@ import { PersonaJuridica } from "./PersonaJuridica";
 import { PersonaNatural } from "./personaNatural";
 import { TipoDocumentoIdentidad } from "./tipoDocumentoIdentidad";
 
-export class Persona {
-    persId:number;
+export class Personas {
+    persId: any;
     persDigitoVerificacion:string;
     persNumeroDocumento:string;
     persDireccion:string;

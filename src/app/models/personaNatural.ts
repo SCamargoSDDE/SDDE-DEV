@@ -1,5 +1,3 @@
-import { Persona } from "./persona";
-
 export class PersonaNatural {
     penaId: number;
     penaPrimerNombre:string;
@@ -7,7 +5,7 @@ export class PersonaNatural {
     penaPrimerApellido:string;
     penaSegundoApellido:string;
     penaFechaNacimiento:Date;
-    penaFechaCreacion:Date;
+    penaFechaCreacion: any;
     penaFechaActualizacion:Date;
     acesId:number;
     discId:number;
