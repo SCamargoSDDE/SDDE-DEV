@@ -1,9 +1,22 @@
+<!-- Header menu navegacion-->
 <div class="rectangle">
     <div class="container">
-        <h1 class="title-page">Inicio sesíon</h1>
+        <div class="header mt-5">
+            <h1 class="title-page">Iniciar sesión</h1>
+            <div class="menu">
+                <a class="link-menu" [routerLink]="['/']">
+                    <img class="img-menu" src="./assets/icons/home.png" alt="img-menu">
+                    <span class="text-span"> Inicio /</span>
+                </a>
+                <a class="link-menu" [routerLink]="['/login']">
+                    <span class="text-span"> Login</span>
+                </a>
+            </div>
+        </div>
     </div>
-
 </div>
+<!-- fin Header menu navegacion-->
+
 <div class="container mt-5">
     <div class="col-12 title-form">
         <h1>Iniciar sesíon</h1>
