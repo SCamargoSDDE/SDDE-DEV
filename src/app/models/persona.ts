@@ -1,17 +1,26 @@
-import { Localidad } from "./localidad";
+import { Localidad } from "./localidades";
+import { PersonaJuridica } from "./PersonaJuridica";
+import { PersonaNatural } from "./personaNatural";
 import { TipoDocumentoIdentidad } from "./tipoDocumentoIdentidad";
 
 export class Persona {
-    id: number;
-    digitoVerificacion: string;
-    tipoDocumentoIdentidad: TipoDocumentoIdentidad; 
-    numeroDocumento: string;
-    direccion: string;
-    telFijo: string;
-    telCelular: string;
-    correoElectronico: string;
-    emprendimientosPasados: number;
-    fechaCreacion: Date;
-    fechaActualizacion: Date;
-    localidad: Localidad;
+    persId:number;
+    persDigitoVerificacion:string;
+    persNumeroDocumento:string;
+    persDireccion:string;
+    persTelFijo:string;
+    persTelCelular:string;
+    persCorreoElectronico:string;
+    persEmprendimientosPasados:number;
+    persBiografia:string;
+    persFechaCreacion:Date;
+    persFechaActualizacion:Date;
+    personaNatural: PersonaNatural;
+    muniId:number;
+    tidoId:number;
+    usuaId:number;
+    personaJuridica:PersonaJuridica;
 }
+
+
+

@@ -1,11 +1,9 @@
 export class Usuario {
-    id: number;
-    nombre: string;
-    contrasena: string;
-    estado: string;
-    fechaCreacion: Date;
-    fechaActualizacion: Date;
+    usuaId: number;
+    usuaUsuario: string;
+    usuaContrasenia: string;
+    usuaEstado: string;
+    usuaFechaCreacion: Date;
+    usuaFechaActualizacion: Date;
     persona: persona;
 }
-
-
