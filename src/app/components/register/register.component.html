@@ -31,7 +31,8 @@
                         <label class="label-form">Tipo de documento de identidad</label>
                         <div class="form-control">
                             <select class="custom-select form-select" formControlName="tipoDocumento">
-                                <option *ngFor="let item of tiposDocumento"  [value]="item.tidoId"> {{item.tidoSiglas}}</option>
+                                <option *ngFor="let item of tiposDocumento" [value]="item.tidoId"> {{item.tidoSiglas}}
+                                </option>
                             </select>
                         </div>
                     </div>
@@ -84,13 +85,13 @@
                     <div class="form-group col">
                         <label class="label-form">DG.</label>
                         <div class="form-control">
-                            <select  class="custom-select form-select" formControlName="c1">
-                                <option  value="1"> Avenida Calle</option>
-                                <option  value="1"> Avenida Carrera</option>
-                                <option  value="1"> Calle</option>
-                                <option  value="1"> Carrera</option>
-                                <option  value="1"> Diagonal</option>
-                                <option  value="1"> Trasversal </option>
+                            <select class="custom-select form-select" formControlName="c1">
+                                <option value="1"> Avenida Calle</option>
+                                <option value="1"> Avenida Carrera</option>
+                                <option value="1"> Calle</option>
+                                <option value="1"> Carrera</option>
+                                <option value="1"> Diagonal</option>
+                                <option value="1"> Trasversal </option>
                             </select>
                         </div>
                     </div>
@@ -137,9 +138,9 @@
                         <div class="form-control">
                             <select class="custom-select form-select" formControlName="c4">
                                 <option selected></option>
-                                <option selected></option>
                                 <option value="BIS">BIS</option>
                                 
+
                             </select>
                         </div>
                     </div>
@@ -235,7 +236,7 @@
                     <div class="form-group col-md-4">
                         <label class="label-form">Este</label>
                         <div class="form-control">
-                            <select class="custom-select form-select" fo    rmControlName="c10">
+                            <select class="custom-select form-select" fo rmControlName="c10">
                                 <option selected></option>
                                 <option value="SUR">SUR</option>
                                 <option value="ESTE">ESTE</option>
