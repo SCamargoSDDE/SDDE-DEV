@@ -1,9 +1,22 @@
+<!-- Header menu navegacion-->
 <div class="rectangle">
     <div class="container">
-        <h1 class="title-page">Registro de nuevo usuario</h1>
+        <div class="header mt-5">
+            <h1 class="title-page">Registro de nuevo usuario</h1>
+            <div class="menu">
+                <a class="link-menu" [routerLink]="['/']">
+                    <img class="img-menu" src="./assets/icons/home.png" alt="img-menu">
+                    <span class="text-span"> Inicio /</span>
+                </a>
+                <a class="link-menu" [routerLink]="['/registro']">
+                    <span class="text-span"> Registro</span>
+                </a>
+            </div>
+        </div>
     </div>
-
 </div>
+<!-- fin Header menu navegacion-->
+
 <div class="container mt-5">
     <div class="col-12 title-form">
         <h1>Registro de nuevo usuario ecosistema Bogotá E</h1>
