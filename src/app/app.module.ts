@@ -16,6 +16,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationOkComponent } from './components/registration-ok/registration-ok.component';
+import { FirstStartComponent } from './components/first-start/first-start.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RegistrationOkComponent } from './components/registration-ok/registrati
     AdminLayoutComponent,
     LoginComponent,
     RegisterComponent,
-    RegistrationOkComponent
+    RegistrationOkComponent,
+    FirstStartComponent
   ],
   imports: [
     BrowserModule,
