@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProgramsComponent } from './components/programs/programs.component';
 import { RegisterComponent } from './components/register/register.component';
+import { RegistrationOkComponent } from './components/registration-ok/registration-ok.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path:'registro',
     component: RegisterComponent
+  },
+  {
+    //Pagina de confirmacion de registro
+    path:'registroOk',
+    component: RegistrationOkComponent
   },
   {
     path:'**',
