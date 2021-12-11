@@ -28,7 +28,7 @@ export class RegisterService {
 
 
   registrarEmprendedor(cliente: Usuarios) : Observable<Usuarios>{
-    const sellersUrl = `${environment.apiUrl}registrar`;
+    const sellersUrl = `${environment.apiUrl}usuarios`;
     return this.http.post<Usuarios>(sellersUrl, cliente);
   }
 

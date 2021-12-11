@@ -123,12 +123,12 @@
                         <label class="label-form">DG.</label>
                         <div class="form-control">
                             <select class="custom-select form-select" formControlName="c1">
-                                <option value="1"> Avenida Calle</option>
-                                <option value="1"> Avenida Carrera</option>
-                                <option value="1"> Calle</option>
-                                <option value="1"> Carrera</option>
-                                <option value="1"> Diagonal</option>
-                                <option value="1"> Trasversal </option>
+                                <option value="Avenida Calle"> Avenida Calle</option>
+                                <option value="Avenida Carrera"> Avenida Carrera</option>
+                                <option value="Calle"> Calle</option>
+                                <option value="Carrera"> Carrera</option>
+                                <option value="Diagonal"> Diagonal</option>
+                                <option value="Trasversal "> Trasversal </option>
                             </select>
                             <!-- Validaciones de formulario -->
                             <div *ngIf="myForm.get('c1').hasError('required') && myForm.get('c1').touched"
@@ -290,7 +290,7 @@
                     <div class="form-group col">
                         <label class="label-form">Este</label>
                         <div class="form-control">
-                            <select class="custom-select form-select" fo rmControlName="c10">
+                            <select class="custom-select form-select" formControlName="c10">
                                 <option selected></option>
                                 <option value="SUR">SUR</option>
                                 <option value="ESTE">ESTE</option>
@@ -310,7 +310,7 @@
                         </div>
                         <div *ngIf="myForm.get('correoElectronico').hasError('email') && myForm.get('correoElectronico').touched"
                             style="margin-top: -20px;">
-                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                            <span class="mda-form-msg">Correo <strong>no valido</strong></span>
                         </div>
                     </div>
 
@@ -322,6 +322,10 @@
                         <div *ngIf="myForm.get('confirmacionCorreo').hasError('required') && myForm.get('confirmacionCorreo').touched"
                             style="margin-top: -20px;">
                             <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <div *ngIf="myForm.get('confirmacionCorreo').hasError('email') && myForm.get('confirmacionCorreo').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Correo <strong>no valido</strong></span>
                         </div>
                         <!-- FIn validaciones de formulario-->
                     </div>

@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
       c9: ['', []],
       c10: ['', []],
       correoElectronico: ['', [Validators.required, Validators.email]],
-      confirmacionCorreo: ['', [Validators.required]],
+      confirmacionCorreo: ['', [Validators.required, Validators.email]],
       fechaNacimiento: ['', [Validators.required]],
       numeroCelular: ['', [Validators.required]],
       numeroFijo: ['', []],
