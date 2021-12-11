@@ -15,6 +15,7 @@ import { RegisterComponent } from './components/register/register.component';
 /*Import para formularios*/
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FirstStartComponent } from './components/first-start/first-start.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProgramsComponent,
     AdminLayoutComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FirstStartComponent
   ],
   imports: [
     BrowserModule,

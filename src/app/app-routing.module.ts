@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FaqComponent } from './components/faq/faq.component';
+import { FirstStartComponent } from './components/first-start/first-start.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProgramsComponent } from './components/programs/programs.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'registro',
     component: RegisterComponent
+  },
+  {
+    path:'primerInicio',
+    component: FirstStartComponent
   },
   {
     path:'**',

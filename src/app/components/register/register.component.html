@@ -35,21 +35,23 @@
                                 </option>
                             </select>
                         </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('tipoDocumento').hasError('required') && myForm.get('tipoDocumento').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
+
+
                     <div class="form-group col-md-6">
                         <label class="label-form">Número de documento de identidad</label>
                         <input type="text" class="form-control" formControlName="numeroDocumento">
-                        <!-- Validaciones de formulario
+                        <!-- Validaciones de formulario -->
                         <div *ngIf="myForm.get('numeroDocumento').hasError('required') && myForm.get('numeroDocumento').touched"
                             style="margin-top: -20px;">
                             <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
                         </div>
-                        <div *ngIf="myForm.get('numeroDocumento').hasError('maxlength') && myForm.get('numeroDocumento').touched"
-                            style="margin-top: -20px;">
-                            <span class="mda-form-msg">El campo debe tener como maximo <strong> 20
-                                    caracteres</strong></span>
-                        </div>
-                        -->
                         <!-- FIn validaciones de formulario-->
                     </div>
                 </div>
@@ -57,6 +59,12 @@
                     <div class="form-group col-md-6">
                         <label class="label-form">Primer apellido</label>
                         <input type="text" class="form-control" formControlName="primerApellido">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('primerApellido').hasError('required') && myForm.get('primerApellido').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
                     <div class="form-group col-md-6">
                         <label class="label-form">Segundo apellido</label>
@@ -67,18 +75,47 @@
                     <div class="form-group col-md-6">
                         <label class="label-form">Primer nombre</label>
                         <input type="text" class="form-control" formControlName="primerNombre">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('primerNombre').hasError('required') && myForm.get('primerNombre').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
                     <div class="form-group col-md-6">
                         <label class="label-form">Segundo nombre</label>
                         <input type="text" class="form-control" formControlName="segundoNombre">
                     </div>
                 </div>
+                <div class="row mt-3">
+                    <div class="form-group col-md-6">
+                        <label class="label-form">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" formControlName="fechaNacimiento">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('fechaNacimiento').hasError('required') && myForm.get('fechaNacimiento').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="label-form">Número celular</label>
+                        <input type="text" class="form-control" formControlName="numeroCelular">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('numeroCelular').hasError('required') && myForm.get('numeroCelular').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
 
                 <div class="row mt-3">
-                    <div class="form-group col-md-12">
+                    <div class="form-group col-12">
                         <label class="label-form">Dirección de residencia</label>
                     </div>
-                    <div class="form-group col-md-12">
+                    <div class="form-group col-12">
                         Ej:
                     </div>
 
@@ -93,11 +130,24 @@
                                 <option value="1"> Diagonal</option>
                                 <option value="1"> Trasversal </option>
                             </select>
+                            <!-- Validaciones de formulario -->
+                            <div *ngIf="myForm.get('c1').hasError('required') && myForm.get('c1').touched"
+                                style="margin-top: -20px;">
+                                <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                            </div>
+                            <!-- FIn validaciones de formulario-->
+
                         </div>
                     </div>
                     <div class="form-group col">
                         <label class="label-form">84*</label>
                         <input type="text" class="form-control" formControlName="c2">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('c2').hasError('required') && myForm.get('c2').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
                     <div class="form-group col">
                         <label class="label-form">B</label>
@@ -191,10 +241,15 @@
                     <div class="form-group col">
                         <label class="label-form">51</label>
                         <input type="text" class="form-control" formControlName="c7">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('c7').hasError('required') && myForm.get('c7').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="form-group col-md-4">
+
+                    <div class="form-group col">
                         <label class="label-form">B</label>
                         <div class="form-control">
                             <select class="custom-select form-select" formControlName="c8">
@@ -228,11 +283,11 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label class="label-form">62</label>
+                    <div class="form-group col">
+                        <label class="label-form">- 62</label>
                         <input type="text" class="form-control" formControlName="c9">
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col">
                         <label class="label-form">Este</label>
                         <div class="form-control">
                             <select class="custom-select form-select" fo rmControlName="c10">
@@ -248,45 +303,58 @@
                     <div class="form-group col-md-6">
                         <label class="label-form">Correo electrónico</label>
                         <input type="text" class="form-control" formControlName="correoElectronico">
+
+                        <div *ngIf="myForm.get('correoElectronico').hasError('required') && myForm.get('correoElectronico').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <div *ngIf="myForm.get('correoElectronico').hasError('email') && myForm.get('correoElectronico').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
                     </div>
+
+
                     <div class="form-group col-md-6">
                         <label class="label-form">Confirmar Correo electrónico</label>
                         <input type="text" class="form-control" formControlName="confirmacionCorreo">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('confirmacionCorreo').hasError('required') && myForm.get('confirmacionCorreo').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
-                </div>
 
-                <div class="row mt-3">
-                    <div class="form-group col-md-6">
-                        <label class="label-form">Fecha de nacimiento</label>
-                        <input type="date" class="form-control" formControlName="fechaNacimiento">
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="form-group col-md-6">
-                        <label class="label-form">Número celular</label>
-                        <input type="text" class="form-control" formControlName="numeroCelular">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="label-form">Número fijo</label>
-                        <input type="text" class="form-control" formControlName="numeroFijo">
-                    </div>
                 </div>
 
                 <div class="row mt-3">
                     <div class="form-group col-md-6">
                         <label class="label-form">Contraseña</label>
-                        <input type="text" class="form-control" formControlName="contrasena">
+                        <input type="password" class="form-control" formControlName="contrasena">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('contrasena').hasError('required') && myForm.get('contrasena').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
                     <div class="form-group col-md-6">
                         <label class="label-form">Confirmar contraseña</label>
-                        <input type="text" class="form-control" formControlName="confirmarContrasena">
+                        <input type="password" class="form-control" formControlName="confirmarContrasena">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('confirmarContrasena').hasError('required') && myForm.get('confirmarContrasena').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
-                        <button type="submit" class="btn btn-azul mt-4" (click)="registrarse()">Registrarse</button>
+                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid"
+                            (click)="registrarse()">Registrarse</button>
                     </div>
                 </div>
             </form>
