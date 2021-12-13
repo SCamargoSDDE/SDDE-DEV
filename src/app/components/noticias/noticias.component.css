@@ -1,0 +1,154 @@
+@font-face {
+    font-family: GothamRounded;
+    src: url('../../../assets/fonts/GothamRounded.ttf') format('truetype');
+}
+
+.container {
+    font-family: GothamRounded;
+}
+
+/* CSS header menu navegacion*/
+.rectangle {
+    background-color: #ED1E79;
+    width: 100%;
+    height: 220px;
+}
+
+.header {
+    width: 50%;
+    position: absolute;
+}
+
+.title-page {
+    width: 50%;
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: 325;
+    line-height: 66px;
+    color: #FFFFFF;
+}
+
+.menu {
+    margin: auto;
+    color: #FFFFFF;
+}
+
+.link-menu {
+    text-decoration: none;
+}
+
+.img-menu {
+    margin-top: -5px;
+    width: 20;
+    height: 20;
+}
+
+.text-span {
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+/* FIN CSS header menu navegacion*/
+
+.form-select {
+    border: none;
+}
+
+.title-form {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+    color: #29ABE2;
+}
+
+.label-form {
+    font-style: normal;
+    font-weight: 325;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    /* Gris contenedor oscuro */
+    color: #656565;
+}
+
+.btn-azul {
+    font-family: GothamRounded;
+    width: 100%;
+    height: 26;
+    color: white;
+    background-color: #29ABE2;
+}
+
+.c-btn {
+    text-align: center;
+}
+
+
+.c-zise {
+    width: 380px;
+    height: 580px;
+    background: #FFFFFF;
+    /* Azul tenue */
+    border: 1px solid #CDF0FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
+
+.body-title {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 21px;
+    /* Blue bogota e plataforma */
+    color: #29ABE2;
+    text-align: center;
+}
+.section{
+    text-align: center;
+}
+.negrita {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 17px;
+    /* Gris texto */
+    color: #262626;
+}
+
+.p-section{
+    font-style: normal;
+    font-weight: 325;
+    font-size: 13px;
+    line-height: 16px;
+    
+    color: #262626;
+
+}
+
+
+.btn-option {
+    /* Fucsia bogota e plataforma */
+    background: #ED1E79;
+    border-radius: 24.4226px;
+    color: #FFFFFF;
+    width: 100%;
+    border: none;
+}
+
+
+.btn-fucsia {
+    /* Fucsia bogota e plataforma */
+    background: #ED1E79;
+    border-radius: 4px;
+    color: #FFFFFF;
+    width: 100%;
+    border: none;
+}
+
+/*validaciones*/
+.mda-form-msg {
+    color: #f44336;
+}

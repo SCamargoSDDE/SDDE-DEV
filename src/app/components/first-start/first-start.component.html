@@ -2,14 +2,14 @@
 <div class="rectangle">
     <div class="container">
         <div class="header mt-5">
-            <h1 class="title-page">Registro de nuevo usuario</h1>
+            <h1 class="title-page">Perfiles del ecosistema</h1>
             <div class="menu">
                 <a class="link-menu" [routerLink]="['/']">
                     <img class="img-menu" src="./assets/icons/home.png" alt="img-menu">
                     <span class="text-span"> Inicio /</span>
                 </a>
-                <a class="link-menu" [routerLink]="['/registro']">
-                    <span class="text-span"> Registro</span>
+                <a class="link-menu" [routerLink]="['/perfilEcosistema']">
+                    <span class="text-span">Directorio Emprendedores</span>
                 </a>
             </div>
         </div>
@@ -18,17 +18,57 @@
 <!-- fin Header menu navegacion-->
 
 <div class="container mt-5">
+    <div class="row">
 
-    <div class="col">
-        <div class="c-zise">
-            <div class="c-top">
+        <div class="col">
+            <div class="c-zise">
+                <div class="c-top">
+                    <img class="c-img mt-3" src="./assets/img/eresEmprendedor.png" alt="Card image cap">
+                </div>
+                <div class="c-under">
+                    <br>
+                    <br>
+                    <h4 class="h-hunder mt-5">¿Eres un emprendedor o empresario?</h4>
 
+                    <div class="c-btn mt-5">
+                        <button type="button" class="btn btn-azul">Registra tu perfil</button>
+                    </div>
+                </div>
             </div>
-            <div class="c-under">
-                
-            </div>
-
         </div>
-    </div>
+        <div class="col">
+            <div class="c-zise">
+                <div class="c-top">
+                    <img class="c-img mt-3" src="./assets/img/quieresApoyar.png" alt="Card image cap">
+                </div>
+                <div class="c-under">
+                    <br>
+                    <br>
+                    <h4 class="h-hunder mt-5">¿Quieres apoyar o impulsar empresas o emprendimientos?</h4>
 
+                    <div class="c-btn mt-5">
+                        <button type="button" class="btn btn-azul">Registra tu perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="c-zise">
+                <div class="c-top">
+                    <img class="c-img mt-3" src="./assets/img/soloConocer.png" alt="Card image cap">
+                </div>
+                <div class="c-under">
+                    <br>
+                    <br>
+                    <h4 class="h-hunder mt-5">¿Solo deseas conocer el directorio?</h4>
+
+                    <div class="c-btn mt-5">
+                        <button type="button" class="btn btn-azul">Explorar el directorio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>

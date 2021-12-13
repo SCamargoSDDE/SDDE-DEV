@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   myForm: FormGroup;
   direccion: any;
   tiposDocumento!: TipoDocumentoIdentidad[];
+  date:any;
 
   constructor(private fb: FormBuilder,
     private register: RegisterService,
@@ -51,6 +52,7 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.date = new Date;
     this.consultarTipoDocumento();
   }
 

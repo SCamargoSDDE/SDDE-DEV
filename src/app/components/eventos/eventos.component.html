@@ -1,0 +1,228 @@
+<!-- Header menu navegacion-->
+<div class="rectangle">
+    <div class="container">
+        <div class="header mt-5">
+            <h1 class="title-page">Eventos</h1>
+            <div class="menu">
+                <a class="link-menu" [routerLink]="['/']">
+                    <img class="img-menu" src="./assets/icons/home.png" alt="img-menu">
+                    <span class="text-span"> Inicio /</span>
+                </a>
+                <a class="link-menu" [routerLink]="['/eventos']">
+                    <span class="text-span">Eventos</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin Header menu navegacion-->
+
+<div class="container mt-5">
+    <div class="row">
+
+        <!-- Campos de filtrado-->
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+            <div class="col-12 title-form">
+                <h1>Filtrar por</h1>
+            </div>
+            <form [formGroup]="myForm" autocomplete="off">
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Fecha</label>
+                        <div class="form-control">
+                            <input type="date" class="form-control" formControlName="fecha"
+                                min="{{this.date | date:'yyyy-MM-dd'}}">
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('fecha').hasError('required') && myForm.get('fecha').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Intereses</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="insteres">
+                                <!--
+                                    <option *ngFor="let item of tiposDocumento" [value]="item.tidoId">
+                                    {{item.tidoDescripcion}}
+                                </option>
+                            -->
+                            </select>
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('insteres').hasError('required') && myForm.get('insteres').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Localidad</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="localidad">
+                                <!--
+                                    <option *ngFor="let item of tiposDocumento" [value]="item.tidoId">
+                                    {{item.tidoDescripcion}}
+                                </option>
+                            -->
+                            </select>
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('localidad').hasError('required') && myForm.get('localidad').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="c-btn mt-3">
+                    <button type="button" class="btn btn-azul">Buscar</button>
+                </div>
+            </form>
+
+            <hr class="c-hr mt-3">
+
+        </div>
+
+        <!-- Contenido en tarjeta entregado-->
+        <div class="col">
+            <div class="row">
+
+                <div class="col mt-5">
+                    <div class="c-zise">
+                        <div class="c-header">
+                            <img class="c-img" src="./assets/img/imgEventos/mibogotaweek 1.png"
+                                alt="Card image cap">
+                        </div>
+                        <div class="c-body">
+                            <div class="container">
+
+                                <div class="body-title mt-3">
+                                    <h4>Agroalimentos S.A.S.</h4>
+                                </div>
+
+                                <div class="section1 row">
+
+                                    <div class="col">
+                                        <h6 class="mt-2">Fecha del evento</h6>
+                                        <h5 class="negrita">Ago. de 2001</h5>
+                                    </div>
+
+                                    <div class="col">
+                                        <h6 class="mt-2">Sectores</h6>
+                                        <div class="row">
+                                            <div class="col">
+                                                <button class="btn-option">Tecnologia</button>
+                                            </div>
+                                            <div class="col mt-1">
+                                                <button class="btn-option">Innovación</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="section2">
+                                    <h6 class="mt-2">Organiza</h6>
+                                    <h5 class="negrita">Innpulsa</h5>
+
+                                    <div class="col">
+                                        <p class="p-section">Mi BogotáWeek es una herramienta digital que reactiva las
+                                            ventas, reúne potenciales compradores y promueve la participación
+                                            competitiva en el mercado electrónico de pequeños empresarios y
+                                            emprendedores, que a la fecha no contaban con participación en este canal
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="section3 row">
+
+                                    <div class="col">
+                                        <h6 class="mt-2">Fecha del evento</h6>
+                                        <h5 class="negrita">Ago. de 2001</h5>
+                                    </div>
+
+                                    <div class="col">
+                                        <button type="button" class="btn btn-fucsia">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col mt-5">
+                    <div class="c-zise">
+                        <div class="c-header">
+                            <img class="c-img" src="./assets/img/imgEventos/mibogotaweek 2.png"
+                                alt="Card image cap">
+                        </div>
+                        <div class="c-body">
+                            <div class="container">
+
+                                <div class="body-title mt-3">
+                                    <h4>Agroalimentos S.A.S.</h4>
+                                </div>
+
+                                <div class="section1 row">
+
+                                    <div class="col">
+                                        <h6 class="mt-2">Fecha del evento</h6>
+                                        <h5 class="negrita">Ago. de 2001</h5>
+                                    </div>
+
+                                    <div class="col">
+                                        <h6 class="mt-2">Sectores</h6>
+                                        <div class="row">
+                                            <div class="col">
+                                                <button class="btn-option">Tecnologia</button>
+                                            </div>
+                                            <div class="col mt-1">
+                                                <button class="btn-option">Innovación</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="section2">
+                                    <h6 class="mt-2">Organiza</h6>
+                                    <h5 class="negrita">Innpulsa</h5>
+
+                                    <div class="col">
+                                        <p class="p-section">Mi BogotáWeek es una herramienta digital que reactiva las
+                                            ventas, reúne potenciales compradores y promueve la participación
+                                            competitiva en el mercado electrónico de pequeños empresarios y
+                                            emprendedores, que a la fecha no contaban con participación en este canal
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="section3 row">
+
+                                    <div class="col">
+                                        <h6 class="mt-2">Fecha del evento</h6>
+                                        <h5 class="negrita">Ago. de 2001</h5>
+                                    </div>
+
+                                    <div class="col">
+                                        <button type="button" class="btn btn-fucsia">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

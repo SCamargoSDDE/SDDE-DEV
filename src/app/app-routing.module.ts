@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DirectorioComponent } from './components/directorio/directorio.component';
+import { EventosComponent } from './components/eventos/eventos.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { FirstStartComponent } from './components/first-start/first-start.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ProgramsComponent } from './components/programs/programs.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RegistrationOkComponent } from './components/registration-ok/registration-ok.component';
@@ -35,8 +38,20 @@ const routes: Routes = [
     component: RegistrationOkComponent
   },
   {
-    path:'primerInicio',
+    path:'perfilEcosistema',
     component: FirstStartComponent
+  },
+  {
+    path:'directorio',
+    component: DirectorioComponent
+  },
+  {
+    path:'eventos',
+    component: EventosComponent
+  },
+  {
+    path:'noticias',
+    component: NoticiasComponent
   },
   {
     path:'**',

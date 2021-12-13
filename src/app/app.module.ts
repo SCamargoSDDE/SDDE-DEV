@@ -17,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationOkComponent } from './components/registration-ok/registration-ok.component';
 import { FirstStartComponent } from './components/first-start/first-start.component';
+import { DirectorioComponent } from './components/directorio/directorio.component';
+import { EventosComponent } from './components/eventos/eventos.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { FirstStartComponent } from './components/first-start/first-start.compon
     LoginComponent,
     RegisterComponent,
     RegistrationOkComponent,
-    FirstStartComponent
+    FirstStartComponent,
+    DirectorioComponent,
+    EventosComponent,
+    NoticiasComponent
   ],
   imports: [
     BrowserModule,

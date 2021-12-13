@@ -1,0 +1,196 @@
+<!-- Header menu navegacion-->
+<div class="rectangle">
+    <div class="container">
+        <div class="header mt-5">
+            <h1 class="title-page">Directorio ecosistema</h1>
+            <div class="menu">
+                <a class="link-menu" [routerLink]="['/']">
+                    <img class="img-menu" src="./assets/icons/home.png" alt="img-menu">
+                    <span class="text-span"> Inicio /</span>
+                </a>
+                <a class="link-menu" [routerLink]="['/directorio']">
+                    <span class="text-span">Directorio ecosistema</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin Header menu navegacion-->
+
+<div class="container mt-5">
+    <div class="row">
+
+        <!-- Campos de filtrado-->
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+            <div class="col-12 title-form">
+                <h1>Filtrar por</h1>
+            </div>
+            <form [formGroup]="myForm" autocomplete="off">
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Sector</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="sector">
+                                <!--
+                                    <option *ngFor="let item of tiposDocumento" [value]="item.tidoId">
+                                    {{item.tidoDescripcion}}
+                                </option>
+                            -->
+                            </select>
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('sector').hasError('required') && myForm.get('sector').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Intereses</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="insteres">
+                                <!--
+                                    <option *ngFor="let item of tiposDocumento" [value]="item.tidoId">
+                                    {{item.tidoDescripcion}}
+                                </option>
+                            -->
+                            </select>
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('insteres').hasError('required') && myForm.get('insteres').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Año en que fue fundada</label>
+                        <div class="form-control">
+                            <input type="date" class="form-control" formControlName="fundada"
+                                max="{{this.date | date:'yyyy-MM-dd'}}">
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('fundada').hasError('required') && myForm.get('fundada').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Numero de empleados</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="numEmpleados">
+                                <!--
+                                    <option *ngFor="let item of tiposDocumento" [value]="item.tidoId">
+                                    {{item.tidoDescripcion}}
+                                </option>
+                            -->
+                            </select>
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('numEmpleados').hasError('required') && myForm.get('numEmpleados').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Otros filtros</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="otros">
+                                <!--
+                                    <option *ngFor="let item of tiposDocumento" [value]="item.tidoId">
+                                    {{item.tidoDescripcion}}
+                                </option>
+                            -->
+                            </select>
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('otros').hasError('required') && myForm.get('otros').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+                <div class="c-btn mt-3">
+                    <button type="button" class="btn btn-azul">Buscar</button>
+                </div>
+            </form>
+
+            <hr class="c-hr mt-3">
+
+        </div>
+
+        <!-- Contenido en tarjeta entregado-->
+        <div class="col">
+            <div class="row">
+
+                <div class="col mt-5">
+                    <div class="c-zise">
+                        <div class="c-header">
+                            <img class="c-img mt-1" src="./assets/img/eresEmprendedor.png" alt="Card image cap">
+                        </div>
+                        <div class="c-body">
+                            <h4 class="h-body mt-1">Agroalimentos S.A.S.</h4>
+                            <h6 class="mt-2">Fundada: <span class="span-fecha">Ago. de 2005</span></h6>
+                            <hr class="c-hr">
+                            <!--Sectores-->
+                            <h6 class="mt-2">Sectores</h6>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col">
+                                    <button class="btn-option">Innovación</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn-option">Innovación</button>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+
+                            <!--Intereses-->
+                            <h6 class="mt-2">Intereses</h6>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col">
+                                    <button class="btn-option">Encontrar aceleradora</button>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+
+                            <!--Numero colaboradores-->
+                            <h6 class="mt-2">Número de colaboradores</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <h3>12</h3>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-2"></div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-fucsia">Registra tu perfil</button>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

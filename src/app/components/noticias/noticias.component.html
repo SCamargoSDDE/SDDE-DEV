@@ -1,0 +1,159 @@
+<!-- Header menu navegacion-->
+<div class="rectangle">
+    <div class="container">
+        <div class="header mt-5">
+            <h1 class="title-page">Noticias</h1>
+            <div class="menu">
+                <a class="link-menu" [routerLink]="['/']">
+                    <img class="img-menu" src="./assets/icons/home.png" alt="img-menu">
+                    <span class="text-span"> Inicio /</span>
+                </a>
+                <a class="link-menu" [routerLink]="['/noticias']">
+                    <span class="text-span">Noticias</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin Header menu navegacion-->
+
+<div class="container mt-5">
+    <div class="row">
+
+        <!-- Campos de filtrado-->
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+            <div class="col-12 title-form">
+                <h1>Filtrar por</h1>
+            </div>
+            <form [formGroup]="myForm" autocomplete="off">
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Fecha</label>
+                        <div class="form-control">
+                            <input type="date" class="form-control" formControlName="fecha">
+                        </div>
+                        <!-- Validaciones de formulario min="{{this.date | date:'yyyy-MM-dd'}}"-->
+                        <div *ngIf="myForm.get('fecha').hasError('required') && myForm.get('fecha').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Categoria</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="categoria">
+                                <!--
+                                    <option *ngFor="let item of tiposDocumento" [value]="item.tidoId">
+                                    {{item.tidoDescripcion}}
+                                </option>
+                            -->
+                            </select>
+                        </div>
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('categoria').hasError('required') && myForm.get('categoria').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                </div>
+
+                <div class="c-btn mt-3">
+                    <button type="button" class="btn btn-azul">Buscar</button>
+                </div>
+            </form>
+
+            <hr class="c-hr mt-3">
+
+        </div>
+
+        <!-- Contenido en tarjeta entregado-->
+        <div class="col">
+            <div class="row">
+
+                <div class="col mt-5">
+                    <div class="c-zise">
+                        <div class="c-header">
+                            <img class="c-img" src="./assets/img/imgNoticias/mibogotaweek 1.png" alt="Card image cap">
+                        </div>
+                        <div class="c-body">
+                            <div class="container">
+
+                                <div class="body-title mt-3">
+                                    <h4>Nueva ley para regular el Blockchain en colombia</h4>
+                                </div>
+
+                                <div class="section mt-2">
+                                    <h6 class="mt-2">Categorías</h6>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn-option">Tecnologia</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn-option">Innovación</button>
+                                        </div>
+                                    </div>
+
+                                    <h5 class="negrita mt-3">Ago. de 2001</h5>
+                                    <h6 class="mt-2">Por:</h6>
+                                    <h5 class="negrita mt-2">Equipo comunicaciones</h5>
+                                    <p class="p-section">Mi BogotáWeek es una herramienta digital que reactiva las
+                                        ventas, reúne potenciales compradores y promueve la part
+                                    </p>
+
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-fucsia">Leer más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mt-5">
+                    <div class="c-zise">
+                        <div class="c-header">
+                            <img class="c-img" src="./assets/img/imgNoticias/mibogotaweek 2.png" alt="Card image cap">
+                        </div>
+                        <div class="c-body">
+                            <div class="container">
+
+                                <div class="body-title mt-3">
+                                    <h4>Nueva ley para regular el Blockchain en colombia</h4>
+                                </div>
+
+                                <div class="section mt-2">
+                                    <h6 class="mt-2">Categorías</h6>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn-option">Tecnologia</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn-option">Innovación</button>
+                                        </div>
+                                    </div>
+
+                                    <h5 class="negrita mt-3">Ago. de 2001</h5>
+                                    <h6 class="mt-2">Por:</h6>
+                                    <h5 class="negrita mt-2">Equipo comunicaciones</h5>
+                                    <p class="p-section">Mi BogotáWeek es una herramienta digital que reactiva las
+                                        ventas, reúne potenciales compradores y promueve la part
+                                    </p>
+
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-fucsia">Leer más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

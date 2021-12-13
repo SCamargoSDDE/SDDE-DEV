@@ -90,7 +90,7 @@
                 <div class="row mt-3">
                     <div class="form-group col-md-6">
                         <label class="label-form">Fecha de nacimiento</label>
-                        <input type="date" class="form-control" formControlName="fechaNacimiento">
+                        <input type="date" class="form-control" formControlName="fechaNacimiento" max="{{this.date | date:'yyyy-MM-dd'}}">
                         <!-- Validaciones de formulario -->
                         <div *ngIf="myForm.get('fechaNacimiento').hasError('required') && myForm.get('fechaNacimiento').touched"
                             style="margin-top: -20px;">
