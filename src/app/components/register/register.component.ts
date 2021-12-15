@@ -6,6 +6,8 @@ import { Personas } from 'src/app/models/personas';
 import { TipoDocumentoIdentidad } from 'src/app/models/tipoDocumentoIdentidad';
 import { Usuarios } from 'src/app/models/usuarios';
 
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,12 +19,13 @@ export class RegisterComponent implements OnInit {
   myForm: FormGroup;
   direccion: any;
   tiposDocumento!: TipoDocumentoIdentidad[];
-  date:any;
+  date: any;
 
   constructor(private fb: FormBuilder,
     private register: RegisterService,
-    private route: Router,) {
-      
+    private route: Router,
+    private snackBar: MatSnackBar) {
+
     this.myForm = this.fb.group({
       tipoDocumento: ['', [Validators.required]],
       numeroDocumento: ['', [Validators.required]],
@@ -48,7 +51,7 @@ export class RegisterComponent implements OnInit {
       contrasena: ['', [Validators.required]],
       confirmarContrasena: ['', [Validators.required]]
     });
-    
+
   }
 
   ngOnInit(): void {
@@ -64,12 +67,10 @@ export class RegisterComponent implements OnInit {
   }
   onTipoDocumento(success: any) {
     this.tiposDocumento = success;
-    console.log(success);
   }
   onErrorTipoDocumento(error: any) {
-    console.log(error);
+    console.log("Servicio no consultado");
   }
-
 
   registrarse() {
     /*se agregar esto para eliminar la observacion de angualr respecto al posible null: "strictNullChecks": false,*/
@@ -119,9 +120,6 @@ export class RegisterComponent implements OnInit {
       }
     };
 
-    console.log(Usuarios);
-
-
     this.register.registrarEmprendedor(Usuarios).subscribe(
       (success => this.onAgregarSuccess(success)),
       (error => this.onAgregarError(error))
@@ -130,25 +128,18 @@ export class RegisterComponent implements OnInit {
   }
 
   onAgregarSuccess(success: any) {
-    console.log('Emprendedor registrado');
+    this.openSnackBar(success.mesaje)
 
-    /*this.snackBar.open('El cliente fue registrado con exito!', '', {
-      duration: 3000,
-    });
-    */
-    
     this.route.navigate(['/registroOk']);
   }
 
-
-
   onAgregarError(error: any) {
-    console.log('No registrado al registro');
-    /*  
-      this.snackBar.open('El cliente no pudo ser registrado verifica los campos!', '', {
-        duration: 3000,
-      });
-    */
+    this.openSnackBar(error.mesaje)
   }
 
+  openSnackBar(message: string) {
+    this.snackBar.open(message, 'Ok!',
+      { duration: 3000 }
+    );
+  }
 }

@@ -20,6 +20,9 @@ import { FirstStartComponent } from './components/first-start/first-start.compon
 import { DirectorioComponent } from './components/directorio/directorio.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar'; 
+
 
 
 @NgModule({
@@ -37,13 +40,16 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
     FirstStartComponent,
     DirectorioComponent,
     EventosComponent,
-    NoticiasComponent
+    NoticiasComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
