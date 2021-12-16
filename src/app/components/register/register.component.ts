@@ -20,6 +20,10 @@ export class RegisterComponent implements OnInit {
   direccion: any;
   tiposDocumento!: TipoDocumentoIdentidad[];
   date: any;
+  correo1: any;
+  correo2: any;
+  contrasena1: any;
+  contrasena2: any;
 
   constructor(private fb: FormBuilder,
     private register: RegisterService,
@@ -73,6 +77,21 @@ export class RegisterComponent implements OnInit {
   }
 
   registrarse() {
+     this.correo1 = this.myForm.get('correoElectronico').value;
+     this.correo2 =  this.myForm.get('confirmacionCorreo').value;
+     this.contrasena1 = this.myForm.get('contrasena').value;
+     this.contrasena2 = this.myForm.get('confirmarContrasena').value;
+
+     if(this.correo1 != this.correo2){
+      this.openSnackBar("El campo confirmación de corre no coincide con campo correo");
+      return
+    }
+    if(this.contrasena1 != this.contrasena2){
+      this.openSnackBar("El campo confirmación de contraseña no coincide con campo contraseña");
+      return
+    }
+
+
     /*se agregar esto para eliminar la observacion de angualr respecto al posible null: "strictNullChecks": false,*/
     this.direccion = this.myForm.get('c1').value + ' ' + this.myForm.get('c2').value + ' ' + this.myForm.get('c3').value + ' ' + this.myForm.get('c4').value + ' ' + this.myForm.get('c5').value + ' ' + this.myForm.get('c6').value + ' # ' + this.myForm.get('c7').value + ' ' + this.myForm.get('c8').value + ' - ' + this.myForm.get('c9').value + ' ' + this.myForm.get('c10').value;
 
@@ -128,13 +147,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onAgregarSuccess(success: any) {
-    this.openSnackBar(success.mesaje)
-
+    this.openSnackBar(success.mensaje)
     this.route.navigate(['/registroOk']);
   }
 
   onAgregarError(error: any) {
-    this.openSnackBar(error.mesaje)
+    this.openSnackBar(error.error.mensaje)
   }
 
   openSnackBar(message: string) {
