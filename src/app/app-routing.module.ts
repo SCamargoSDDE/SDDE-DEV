@@ -53,6 +53,8 @@ const routes: Routes = [
     path:'noticias',
     component: NoticiasComponent
   },
+
+  { path: 'emprendimiento', loadChildren: () => import('./components/forms-emprendimiento/forms-emprendimiento.module').then(m => m.FormsEmprendimientoModule) },
   {
     path:'**',
     component: HomeComponent

@@ -1,0 +1,354 @@
+<!-- Header menu navegacion-->
+<div class="rectangle">
+    <div class="container">
+        <div class="header mt-5">
+            <h1 class="title-page">Formulario negocios parte 1</h1>
+            <div class="menu">
+                <a class="link-menu" [routerLink]="['/']">
+                    <img class="img-menu" src="./assets/icons/home.png" alt="img-menu">
+                    <span class="text-span"> Inicio /</span>
+                </a>
+                <a class="link-menu" [routerLink]="['/registro']">
+                    <span class="text-span"> Registro</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin Header menu navegacion-->
+
+<div class="container mt-5">
+    <div class="row mt-3">
+        <div class="form-group col-md-6">
+            <label class="label-form">Estas a pocos pasos de ser parte de nuestro ecosistema</label>
+            <label class="label-form">Progreso general</label>
+            
+        </div>
+        <div class="logos m-5">
+            <img src="./assets/img/35porciento.png" class="img-fluid" alt="Responsive image">
+        </div>
+       
+    </div>
+
+    <div class="col-12 title-form">
+        <h1>Información Basica de tu negocio</h1>
+    </div>
+    <div class="row mt-5">
+        <div class="col-8 col-md-12">
+
+            <form [formGroup]="myForm" autocomplete="off">
+                <div class="row mt-3">
+                    
+                    <div class="form-group col-md-12 col-sm-6 col-">
+                        <label class="label-form">¿El negocio que esta registrando esta legalmente constituido? *</label>
+                                             
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="emplendimientoConstituido" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Si
+                            </label>
+                            
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" formControlName="emplendimientoConstituido" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              No
+                            </label>
+                          </div>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row mt-3">
+                    <div class="form-group col-md-5">
+                        <label class="label-form">Nombre de la empresa o emprendimiento </label>
+                        <input type="text" class="form-control" formControlName="nombreEmprendimiento">
+                        
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Cedula o Nit</label>
+                        <input type="text" class="form-control" formControlName="nitEmprendimiento">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="label-form">Feche de creación</label>
+                        <input type="date" class="form-control" formControlName="fechaCreacionEmprendimiento">
+                    </div>
+                </div>
+                
+                
+                <div class="row mt-3">
+                    <div class="form-group col-12">
+                        <label class="label-form">Direccion de correspondencia *</label>
+                    </div>
+                    <div class="form-group col-12">
+                        Ej:
+                    </div>
+
+                    <div class="form-group col">
+                        <label class="label-form">DG.</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="c1">
+                                <option value="Avenida Calle"> Avenida Calle</option>
+                                <option value="Avenida Carrera"> Avenida Carrera</option>
+                                <option value="Calle"> Calle</option>
+                                <option value="Carrera"> Carrera</option>
+                                <option value="Diagonal"> Diagonal</option>
+                                <option value="Trasversal "> Trasversal </option>
+                            </select>
+                            <!-- Validaciones de formulario -->
+                            <div *ngIf="myForm.get('c1').hasError('required') && myForm.get('c1').touched"
+                                style="margin-top: -20px;">
+                                <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                            </div>
+                            <!-- FIn validaciones de formulario-->
+
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label-form">84*</label>
+                        <input type="text" class="form-control" formControlName="c2">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('c2').hasError('required') && myForm.get('c2').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+                    <div class="form-group col">
+                        <label class="label-form">B</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="c3">
+                                <option selected></option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                                <option value="I">I</option>
+                                <option value="J">J</option>
+                                <option value="K">K</option>
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="N">N</option>
+                                <option value="O">O</option>
+                                <option value="P">P</option>
+                                <option value="Q">Q</option>
+                                <option value="R">R</option>
+                                <option value="S">S</option>
+                                <option value="T">T</option>
+                                <option value="U">U</option>
+                                <option value="V">V</option>
+                                <option value="W">W</option>
+                                <option value="X">X</option>
+                                <option value="Y">Y</option>
+                                <option value="Z">Z</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label-form">Bis</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="c4">
+                                <option selected></option>
+                                <option value="BIS">BIS</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label-form">A</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="c5">
+                                <option selected></option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                                <option value="I">I</option>
+                                <option value="J">J</option>
+                                <option value="K">K</option>
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="N">N</option>
+                                <option value="O">O</option>
+                                <option value="P">P</option>
+                                <option value="Q">Q</option>
+                                <option value="R">R</option>
+                                <option value="S">S</option>
+                                <option value="T">T</option>
+                                <option value="U">U</option>
+                                <option value="V">V</option>
+                                <option value="W">W</option>
+                                <option value="X">X</option>
+                                <option value="Y">Y</option>
+                                <option value="Z">Z</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label-form">Sur</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="c6">
+                                <option selected></option>
+                                <option value="SUR">SUR</option>
+                                <option value="ESTE">ESTE</option>
+                            </select>
+                        </div>
+                    </div>
+                    #
+                    <div class="form-group col">
+                        <label class="label-form">51</label>
+                        <input type="text" class="form-control" formControlName="c7">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('c7').hasError('required') && myForm.get('c7').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+
+                    <div class="form-group col">
+                        <label class="label-form">B</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="c8">
+                                <option selected></option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                                <option value="I">I</option>
+                                <option value="J">J</option>
+                                <option value="K">K</option>
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="N">N</option>
+                                <option value="O">O</option>
+                                <option value="P">P</option>
+                                <option value="Q">Q</option>
+                                <option value="R">R</option>
+                                <option value="S">S</option>
+                                <option value="T">T</option>
+                                <option value="U">U</option>
+                                <option value="V">V</option>
+                                <option value="W">W</option>
+                                <option value="X">X</option>
+                                <option value="Y">Y</option>
+                                <option value="Z">Z</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label class="label-form">- 62</label>
+                        <input type="text" class="form-control" formControlName="c9">
+                    </div>
+                    <div class="form-group col">
+                        <label class="label-form">Este</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="c10">
+                                <option selected></option>
+                                <option value="SUR">SUR</option>
+                                <option value="ESTE">ESTE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Localidad *</label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="localidadEmprendimiento">
+                                <option >
+                                </option>
+                            </select>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Correo electrónico</label>
+                        <input type="text" class="form-control" formControlName="correoElectronicoEmprendimiento">
+
+                        <div *ngIf="myForm.get('correoElectronico').hasError('required') && myForm.get('correoElectronicoEmprendimiento').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <div *ngIf="myForm.get('correoElectronico').hasError('email') && myForm.get('correoElectronicoEmprendimiento').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Correo <strong>no valido</strong></span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Confirmar Correo electrónico</label>
+                        <input type="text" class="form-control" formControlName="confirmacionCorreoEmprendimiento">
+                        <!-- Validaciones de formulario -->
+                        <div *ngIf="myForm.get('confirmacionCorreo').hasError('required') && myForm.get('confirmacionCorreoEmprendimiento').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
+                        </div>
+                        <div *ngIf="myForm.get('confirmacionCorreo').hasError('email') && myForm.get('confirmacionCorreoEmprendimiento').touched"
+                            style="margin-top: -20px;">
+                            <span class="mda-form-msg">Correo <strong>no valido</strong></span>
+                        </div>
+                        <!-- FIn validaciones de formulario-->
+                    </div>
+
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Sitio web</label>
+                        <input type="text" class="form-control" formControlName="sitioWebEmprendimiento">
+                       
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Número telefonico *</label>
+                        <input type="text" class="form-control" formControlName="numeroTelefonicoEmprendimiento">
+                       
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Número telefonico alterno</label>
+                        <input type="text" class="form-control" formControlName="numeroTelefonicoAlternativoEmprendimiento">
+                       
+                    </div>
+
+
+
+                </div>
+                
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid"
+                           >Guardar</button>
+                    </div>
+
+                    <div class="col">
+                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid"
+                           >Guardar y Continuar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-4 col-md-12">
+            <div style="background-color: black; width: 100%;"></div>
+        </div>
+    </div>
+
+</div>

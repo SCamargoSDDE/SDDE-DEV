@@ -1,0 +1,101 @@
+@font-face {
+    font-family: GothamRounded;
+    src: url('../../../../assets/fonts/GothamRounded.ttf') format('truetype');
+}
+
+.container {
+    font-family: GothamRounded;
+}
+
+/* CSS header menu navegacion*/
+.rectangle {
+    background-color: #ED1E79;
+    width: 100%;
+    height: 220px;
+}
+
+.header {
+    width: 50%;
+    position: absolute;
+}
+
+.title-page {
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: 325;
+    line-height: 66px;
+    color: #FFFFFF;
+}
+
+.menu {
+    margin: auto;
+    color: #FFFFFF;
+}
+
+.link-menu {
+    text-decoration: none;
+}
+
+.img-menu {
+    margin-top: -5px;
+    width: 20;
+    height: 20;
+}
+
+.text-span {
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 15px;
+    color: #FFFFFF;
+
+}
+
+/* FIN CSS header menu navegacion*/
+
+.title-form {
+    font-family: GothamRounded;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 21px;
+    align-items: center;
+    text-align: center;
+    /* Gris contenedor oscuro */
+    color: #656565;
+}
+
+.form-body {
+    align-items: center;
+}
+
+.label-form {
+    font-family: GothamRounded;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #656565;
+}
+
+.btn-azul {
+    font-family: GothamRounded;
+    width: 100%;
+    height: 42px;
+    color: #FFFFFF;
+    background-color: #29ABE2;
+    border-radius: 4px;
+}
+
+.form-select {
+    border: none;
+}
+
+/*validaciones*/
+.mda-form-msg {
+    color: #f44336;
+}
+
+.mat-form-field {
+    margin-right: 8px;
+}

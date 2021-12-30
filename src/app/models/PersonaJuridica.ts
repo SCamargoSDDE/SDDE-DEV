@@ -1,4 +1,4 @@
-import { Localidad } from "./localidades";
+import { Localidades } from "./localidades";
 
 export class PersonaJuridica {
     pujuId: number;
@@ -26,7 +26,7 @@ export class PersonaJuridica {
     pejuUsaLibrosContables: string;
     pejuUsaMediosPagoDigital: string;
     pejuExperienciaEmpresa: string;
-    locaId: Localidad;
+    locaId: Localidades;
     persId: number;
 }
 

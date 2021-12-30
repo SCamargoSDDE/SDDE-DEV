@@ -1,4 +1,4 @@
-import { Localidad } from "./localidades";
+import { Localidades } from "./localidades";
 import { PersonaJuridica } from "./PersonaJuridica";
 import { PersonaNatural } from "./personaNatural";
 import { TipoDocumentoIdentidad } from "./tipoDocumentoIdentidad";

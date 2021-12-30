@@ -21,7 +21,7 @@ import { DirectorioComponent } from './components/directorio/directorio.componen
 import { EventosComponent } from './components/eventos/eventos.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSnackBarModule } from '@angular/material/snack-bar'; 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -41,6 +41,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     DirectorioComponent,
     EventosComponent,
     NoticiasComponent,
+ 
 
   ],
   imports: [

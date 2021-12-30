@@ -1,6 +1,6 @@
 import { PersonaJuridica } from "./PersonaJuridica";
 
-export class Localidad {
+export class Localidades {
     locaId: number;
     locaNombre: string;
     locaEstado: string;
