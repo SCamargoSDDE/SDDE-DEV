@@ -111,6 +111,7 @@
     background: #EDEDED;
     border: 11px solid #ED1E79;
     border-radius: 100%;
+    margin: auto;
 }
 
 .ayuda {
@@ -128,3 +129,4 @@
 .azul{
     color: #29ABE2;
 }
+/*FIN Formacion div perfil*/
