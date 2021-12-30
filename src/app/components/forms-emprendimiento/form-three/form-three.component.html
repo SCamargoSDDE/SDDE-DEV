@@ -33,83 +33,109 @@
     <div class="col-12 title-form">
         <h1>Información organizacional general</h1>
     </div>
-    <div class="row mt-5">
-        <div class="col-8 col-md-12">
+    <div class="mt-5">
+        <form [formGroup]="myForm" autocomplete="off">
+            <div class="row">
+                <div class="col-8 col-md-8">
+                    <div class="row mt-3">
+                        <div class="form-group col-md-4">
+                            <label class="label-form">Sector productivo </label>
+                            <div class="form-control">
+                                <select class="custom-select form-select" formControlName="sectorProductivo">
+                                    <option>
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
 
-            <form [formGroup]="myForm" autocomplete="off">
-
-
-                <div class="row mt-3">
-                    <div class="form-group col-md-4">
-                        <label class="label-form">Sector productivo </label>
-                        <div class="form-control">
-                            <select class="custom-select form-select" formControlName="sectorProductivo">
-                                <option>
-                                </option>
-                            </select>
+                        <div class="form-group col-md-4">
+                            <label class="label-form">Intereses </label>
+                            <div class="form-control">
+                                <select class="custom-select form-select" formControlName="intereses">
+                                    <option value="Conectar con incubadoras">Conectar con incubadoras</option>
+                                    <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
+                                    <option value="Generar networking">Generar networking</option>
+                                    <option value="Encontrar inversionista">Encontrar inversionista</option>
+                                    <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="label-form">Número de colaboradores </label>
+                            <input type="text" class="form-control" formControlName="numeroColaboradores">
                         </div>
                     </div>
 
-                    <div class="form-group col-md-4">
-                        <label class="label-form">Intereses </label>
-                        <div class="form-control">
-                            <select class="custom-select form-select" formControlName="intereses">
-                                <option value="Conectar con incubadoras">Conectar con incubadoras</option>
-                                <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
-                                <option value="Generar networking">Generar networking</option>
-                                <option value="Encontrar inversionista">Encontrar inversionista</option>
-                                <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
-                                </option>
-                            </select>
+                    <div class="row mt-3">
+                        <div class="form-group">
+                            <label>Breve descripción del emprendimiento</label>
+                            <textarea class="form-control" formControlName="descripcionEmprendimiento"
+                                rows="3"></textarea>
                         </div>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label class="label-form">Número de colaboradores </label>
-                        <input type="text" class="form-control" formControlName="numeroColaboradores">
+
+                    <div class="row mt-3">
+                        <div class="form-group">
+                            <label>Público objetivo (clientes y usuarios)</label>
+                            <textarea class="form-control" formControlName="publicoEmprendimiento" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="form-group">
+                            <label>Propuesta de valor</label>
+                            <textarea class="form-control" formControlName="dpropuestaEmprendimiento"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="form-group">
+                            <label>Problema a solucionar, necesidad, oportunidad o frustación</label>
+                            <textarea class="form-control" formControlName="problemaEmprendimiento" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col">
+                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
+                        </div>
+
+                        <div class="col">
+                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y
+                                Continuar</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row mt-3">
-                    <div class="form-group">
-                        <label>Breve descripción del emprendimiento</label>
-                        <textarea class="form-control" formControlName="descripcionEmprendimiento" rows="3"></textarea>
+                <div class="col-4 col-md-4">
+                    <div class="container cont-perfil">
+                        <div class="img-profile">
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="file mt-2">
+                            <input type="file" name="" id="" value="epe">
+                        </div>
+
+                        <div class="progres mt-4">
+                            <h5>Has completado el </h5>
+                            <div>
+                                <img src="./assets/img/70porciento.png" class="img-fluid" alt="Responsive image">
+                            </div>
+                            <h5 class="mt-2">De tu perfil</h5>
+                        </div>
+                        <hr>
+                        <div class="footer">
+                            <h6 class="ayuda"> ¿Necesitas ayuda?</h6>
+                            <h6 class="ayuda">Visita nuestro <span class="azul"> centro de ayuda </span> o escribenos un correo a <span class="rosa">info@bogotae.gov.co</span> </h6>
+                        </div>
+
                     </div>
                 </div>
-
-                <div class="row mt-3">
-                    <div class="form-group">
-                        <label>Público objetivo (clientes y usuarios)</label>
-                        <textarea class="form-control" formControlName="publicoEmprendimiento" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="form-group">
-                        <label>Propuesta de valor</label>
-                        <textarea class="form-control" formControlName="dpropuestaEmprendimiento" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="form-group">
-                        <label>Problema a solucionar, necesidad, oportunidad o frustación</label>
-                        <textarea class="form-control" formControlName="problemaEmprendimiento" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="col">
-                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
-                    </div>
-
-                    <div class="col">
-                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y
-                            Continuar</button>
-                    </div>
-                </div>
-
-            </form>
-        </div>
+            </div>
+        </form>
 
         <div class="col-4 col-md-12">
             <div style="background-color: black; width: 100%;"></div>

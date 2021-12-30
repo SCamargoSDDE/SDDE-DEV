@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginGuard } from './auth/login.guard';
 import { DirectorioComponent } from './components/directorio/directorio.component';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { FaqComponent } from './components/faq/faq.component';
@@ -54,7 +55,10 @@ const routes: Routes = [
     component: NoticiasComponent
   },
 
-  { path: 'emprendimiento', loadChildren: () => import('./components/forms-emprendimiento/forms-emprendimiento.module').then(m => m.FormsEmprendimientoModule) },
+  { 
+    path: 'emprendimiento', 
+    //canActivate: [LoginGuard],
+    loadChildren: () => import('./components/forms-emprendimiento/forms-emprendimiento.module').then(m => m.FormsEmprendimientoModule) },
   {
     path:'**',
     component: HomeComponent

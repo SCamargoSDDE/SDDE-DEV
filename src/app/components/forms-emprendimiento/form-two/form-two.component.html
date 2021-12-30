@@ -36,32 +36,203 @@
     <div class="col-12 title-form">
         <h1>Información de cofundadores</h1>
     </div>
-    <div class="row mt-5">
-        <div class="col-8 col-md-12">
+    <div class="mt-5">
+        <form [formGroup]="myForm" autocomplete="off">
+            <div class="row">
+                <div class="col-8 col-md-8">
 
-            <form [formGroup]="myForm" autocomplete="off">
-                <div class="row mt-3">
+                    <div class="row mt-3">
 
-                    <div class="form-group col-md-6 col-sm-6 col-">
-                        <label class="label-form">Número de co fundadores</label>
-                        <input type="text" class="form-control" formControlName="numeroCofundadoresEmprendimiento">
+                        <div class="form-group col-md-6 col-sm-6 col-">
+                            <label class="label-form">Número de co fundadores</label>
+                            <input type="text" class="form-control" formControlName="numeroCofundadoresEmprendimiento">
 
 
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group form-control mt-3">
-                    <h6> Co fundador 1</h6>
+                    <div class="form-group form-control mt-3">
+                        <h6> Co fundador 1</h6>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer Nombre </label>
+                                <input type="text" class="form-control" formControlName="primerNombreCofundador1">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo nombre</label>
+                                <input type="text" class="form-control" formControlName="segundoNombreCofundador1">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer apellido </label>
+                                <input type="text" class="form-control" formControlName="primerApellidoCofundador1">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo apellido</label>
+                                <input type="text" class="form-control" formControlName="segundoApellidoCofundador1">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Número telefonico de contacto </label>
+                                <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador1">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Correo de contacto</label>
+                                <input type="text" class="form-control" formControlName="correoCofundador1">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group form-control mt-3">
+                        <h6> Co fundador 2</h6>
+
+
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer Nombre </label>
+                                <input type="text" class="form-control" formControlName="primerNombreCofundador2">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo nombre</label>
+                                <input type="text" class="form-control" formControlName="segundoNombreCofundador2">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer apellido </label>
+                                <input type="text" class="form-control" formControlName="primerApellidoCofundador2">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo apellido</label>
+                                <input type="text" class="form-control" formControlName="segundoApellidoCofundador2">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Número telefonico de contacto </label>
+                                <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador2">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Correo de contacto</label>
+                                <input type="text" class="form-control" formControlName="correoCofundador2">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group form-control mt-3">
+                        <h6> Co fundador 3</h6>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer Nombre </label>
+                                <input type="text" class="form-control" formControlName="primerNombreCofundador3">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo nombre</label>
+                                <input type="text" class="form-control" formControlName="segundoNombreCofundador3">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer apellido </label>
+                                <input type="text" class="form-control" formControlName="primerApellidoCofundador3">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo apellido</label>
+                                <input type="text" class="form-control" formControlName="segundoApellidoCofundador3">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Número telefonico de contacto </label>
+                                <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador3">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Correo de contacto</label>
+                                <input type="text" class="form-control" formControlName="correoCofundador3">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group form-control mt-3">
+                        <h6> Co fundador 4</h6>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer Nombre </label>
+                                <input type="text" class="form-control" formControlName="primerNombreCofundador4">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo nombre</label>
+                                <input type="text" class="form-control" formControlName="segundoNombreCofundador4">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Primer apellido </label>
+                                <input type="text" class="form-control" formControlName="primerApellidoCofundador4">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Segundo apellido</label>
+                                <input type="text" class="form-control" formControlName="segundoApellidoCofundador4">
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Número telefonico de contacto </label>
+                                <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador4">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="label-form">Correo de contacto</label>
+                                <input type="text" class="form-control" formControlName="correoCofundador4">
+                            </div>
+
+                        </div>
+                    </div>
+                    Representante legal2
 
                     <div class="row mt-3">
                         <div class="form-group col-md-6">
                             <label class="label-form">Primer Nombre </label>
-                            <input type="text" class="form-control" formControlName="primerNombreCofundador1">
+                            <input type="text" class="form-control" formControlName="primerNombreRepresentante">
 
                         </div>
                         <div class="form-group col-md-6">
                             <label class="label-form">Segundo nombre</label>
-                            <input type="text" class="form-control" formControlName="segundoNombreCofundador1">
+                            <input type="text" class="form-control" formControlName="segundoNombreRepresentante">
                         </div>
 
                     </div>
@@ -69,200 +240,56 @@
                     <div class="row mt-3">
                         <div class="form-group col-md-6">
                             <label class="label-form">Primer apellido </label>
-                            <input type="text" class="form-control" formControlName="primerApellidoCofundador1">
+                            <input type="text" class="form-control" formControlName="primerApellidoRepresentante">
 
                         </div>
                         <div class="form-group col-md-6">
                             <label class="label-form">Segundo apellido</label>
-                            <input type="text" class="form-control" formControlName="segundoApellidoCofundador1">
+                            <input type="text" class="form-control" formControlName="segundoApellidoRepresentante">
                         </div>
 
                     </div>
 
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Número telefonico de contacto </label>
-                            <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador1">
 
+
+                    <div class="row mt-3">
+                        <div class="col">
+                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Correo de contacto</label>
-                            <input type="text" class="form-control" formControlName="correoCofundador1">
+
+                        <div class="col">
+                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y
+                                Continuar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-4">
+                    <div class="container cont-perfil">
+                        <div class="img-profile">
+                            <img src="" alt="">
+                        </div>
+
+                        <div class="file mt-2">
+                            <input type="file" name="" id="" value="epe">
+                        </div>
+
+                        <div class="progres mt-4">
+                            <h5>Has completado el </h5>
+                            <div>
+                                <img src="./assets/img/70porciento.png" class="img-fluid" alt="Responsive image">
+                            </div>
+                            <h5 class="mt-2">De tu perfil</h5>
+                        </div>
+                        <hr>
+                        <div class="footer">
+                            <h6 class="ayuda"> ¿Necesitas ayuda?</h6>
+                            <h6 class="ayuda">Visita nuestro <span class="azul"> centro de ayuda </span> o escribenos un correo a <span class="rosa">info@bogotae.gov.co</span> </h6>
                         </div>
 
                     </div>
                 </div>
-                <div class="form-group form-control mt-3">
-                    <h6> Co fundador 2</h6>
-
-
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer Nombre </label>
-                            <input type="text" class="form-control" formControlName="primerNombreCofundador2">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo nombre</label>
-                            <input type="text" class="form-control" formControlName="segundoNombreCofundador2">
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer apellido </label>
-                            <input type="text" class="form-control" formControlName="primerApellidoCofundador2">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo apellido</label>
-                            <input type="text" class="form-control" formControlName="segundoApellidoCofundador2">
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Número telefonico de contacto </label>
-                            <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador2">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Correo de contacto</label>
-                            <input type="text" class="form-control" formControlName="correoCofundador2">
-                        </div>
-
-                    </div>
-                </div>
-                <div class="form-group form-control mt-3">
-                    <h6> Co fundador 3</h6>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer Nombre </label>
-                            <input type="text" class="form-control" formControlName="primerNombreCofundador3">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo nombre</label>
-                            <input type="text" class="form-control" formControlName="segundoNombreCofundador3">
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer apellido </label>
-                            <input type="text" class="form-control" formControlName="primerApellidoCofundador3">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo apellido</label>
-                            <input type="text" class="form-control" formControlName="segundoApellidoCofundador3">
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Número telefonico de contacto </label>
-                            <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador3">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Correo de contacto</label>
-                            <input type="text" class="form-control" formControlName="correoCofundador3">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="form-group form-control mt-3">
-                    <h6> Co fundador 4</h6>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer Nombre </label>
-                            <input type="text" class="form-control" formControlName="primerNombreCofundador4">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo nombre</label>
-                            <input type="text" class="form-control" formControlName="segundoNombreCofundador4">
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer apellido </label>
-                            <input type="text" class="form-control" formControlName="primerApellidoCofundador4">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo apellido</label>
-                            <input type="text" class="form-control" formControlName="segundoApellidoCofundador4">
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Número telefonico de contacto </label>
-                            <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador4">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Correo de contacto</label>
-                            <input type="text" class="form-control" formControlName="correoCofundador4">
-                        </div>
-
-                    </div>
-                </div>
-                Representante legal2
-
-                <div class="row mt-3">
-                    <div class="form-group col-md-6">
-                        <label class="label-form">Primer Nombre </label>
-                        <input type="text" class="form-control" formControlName="primerNombreRepresentante">
-
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="label-form">Segundo nombre</label>
-                        <input type="text" class="form-control" formControlName="segundoNombreRepresentante">
-                    </div>
-
-                </div>
-
-                <div class="row mt-3">
-                    <div class="form-group col-md-6">
-                        <label class="label-form">Primer apellido </label>
-                        <input type="text" class="form-control" formControlName="primerApellidoRepresentante">
-
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label class="label-form">Segundo apellido</label>
-                        <input type="text" class="form-control" formControlName="segundoApellidoRepresentante">
-                    </div>
-
-                </div>
-
-
-
-                <div class="row mt-3">
-                    <div class="col">
-                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
-                    </div>
-
-                    <div class="col">
-                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y
-                            Continuar</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
 
         <div class="col-4 col-md-12">
             <div style="background-color: black; width: 100%;"></div>
