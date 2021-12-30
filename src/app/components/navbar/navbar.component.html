@@ -12,7 +12,7 @@
       </div>
     </ng-template>
     
-    <div *ngIf="user != null; else showLogin" class="ms-auto">
+    <div *ngIf="validate | async ; else showLogin" class="ms-auto">
       <a class="a-unstyled" (click)="logout()">
         <button type="button" class="btn btn-fucsia-logout mt-2">Cerrar sesión</button></a>
     </div>

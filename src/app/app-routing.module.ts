@@ -61,7 +61,7 @@ const routes: Routes = [
 
   { 
     path: 'emprendimiento', 
-    //canActivate: [LoginGuard],
+    canActivate: [LoginGuard],
     loadChildren: () => import('./components/forms-emprendimiento/forms-emprendimiento.module').then(m => m.FormsEmprendimientoModule) },
   {
     path:'**',

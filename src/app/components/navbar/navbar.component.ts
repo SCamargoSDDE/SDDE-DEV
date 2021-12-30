@@ -8,21 +8,19 @@ import { LoginService } from 'src/app/auth/login.service';
 })
 export class NavbarComponent implements OnInit {
   user: any;
+  validate: any;
   constructor(
-    private login:LoginService
+    private login: LoginService
   ) {
     
-   }
+  }
 
   ngOnInit(): void {
     const currentUser = this.login.currentUserValue;
-    this.user = currentUser;
-    console.log(currentUser);
-
+    this.validate = this.login.currentUser.pipe();
   }
 
   logout() {
     this.login.logout();
-    
   }
 }
