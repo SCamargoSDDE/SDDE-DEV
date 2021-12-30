@@ -8,6 +8,7 @@ import { TipoDocumentoIdentidad } from '../models/tipoDocumentoIdentidad';
 import { Usuarios } from '../models/usuarios';
 import { LoginForm } from '../models/login-form';
 import { JwtResponse } from '../models/jwt-response';
+import { Emprendimientos } from '../models/emprendimientos';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,12 @@ export class ApiService {
   registrarEmprendedor(cliente: Usuarios) : Observable<Usuarios>{
     const sellersUrl = `${environment.apiUrl}usuarios`;
     return this.http.post<Usuarios>(sellersUrl, cliente);
+  }
+
+  //le falta validar , no fiarse
+  formularioUnoEmpredimiento(formulario: Emprendimientos) : Observable<Emprendimientos>{
+    const sellersUrl = `${environment.apiUrl}formularioUno`;
+    return this.http.post<Emprendimientos>(sellersUrl, formulario);
   }
 
 /*  getCliente(index: number): Observable<Cliente>{

@@ -10,13 +10,17 @@ import { FormThreeComponent } from './form-three/form-three.component';
 /*Import para formularios*/
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormFourComponent } from './form-four/form-four.component';
+import { FormFiveComponent } from './form-five/form-five.component';
 
 @NgModule({
   declarations: [
     FormsEmprendimientoComponent,
     FormOneComponent,
     FormTwoComponent,
-    FormThreeComponent
+    FormThreeComponent,
+    FormFourComponent,
+    FormFiveComponent
   ],
   imports: [
     CommonModule,

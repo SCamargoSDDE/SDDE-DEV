@@ -54,6 +54,10 @@ const routes: Routes = [
     path:'noticias',
     component: NoticiasComponent
   },
+  {
+    path:'primerInicio',
+    component: FirstStartComponent
+  },
 
   { 
     path: 'emprendimiento', 

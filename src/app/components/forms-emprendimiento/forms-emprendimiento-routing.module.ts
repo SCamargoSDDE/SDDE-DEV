@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormFiveComponent } from './form-five/form-five.component';
+import { FormFourComponent } from './form-four/form-four.component';
 import { FormOneComponent } from './form-one/form-one.component';
 import { FormThreeComponent } from './form-three/form-three.component';
 import { FormTwoComponent } from './form-two/form-two.component';
@@ -23,6 +25,14 @@ const routes: Routes = [
       { 
         path: 'formulario-tres', 
         component: FormThreeComponent 
+      },
+      { 
+        path: 'formulario-cuatro', 
+        component: FormFourComponent 
+      },
+      { 
+        path: 'formulario-cinco', 
+        component: FormFiveComponent 
       },
     ]
   }

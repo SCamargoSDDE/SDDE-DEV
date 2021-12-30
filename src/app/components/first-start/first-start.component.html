@@ -18,6 +18,7 @@
 <!-- fin Header menu navegacion-->
 
 <div class="container mt-5">
+    <h1> {{nombre}} selecciona que camino quieres tomar</h1>
     <div class="row">
 
         <div class="col">
@@ -31,7 +32,9 @@
                     <h4 class="h-hunder mt-5">¿Eres un emprendedor o empresario?</h4>
 
                     <div class="c-btn mt-5">
-                        <button type="button" class="btn btn-azul">Registra tu perfil</button>
+                        <a [routerLink]="['/emprendimiento/formulario-uno']">
+                            <button type="button" class="btn btn-azul">Registra tu perfil </button>
+                        </a>
                     </div>
                 </div>
             </div>

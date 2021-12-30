@@ -45,5 +45,9 @@ export class FormOneComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  guardar(){
+    const formValue = this.myForm.value;
+    console.log(formValue)
+  }
 
 }
