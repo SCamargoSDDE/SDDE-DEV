@@ -24,22 +24,22 @@
     <div class="row">
         <div class="col-3 col-md-2"></div>
         <div class="col-6 col-md-8">
-            <form>
+            <form [formGroup]="myForm" autocomplete="off">
                 <div class="row mt-3">
 
                     <div class="col">
                         <label class="label-form">Numero de documento</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" formControlName="usuaUsuario">
                     </div>
                     <div class="col">
                         <label class="label-form">Contraseña</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" formControlName="usuaContrasenia">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
-                        <button type="submit" class="btn btn-azul mt-3">Ingresar</button>
+                        <button type="submit" class="btn btn-azul mt-3" [disabled]="myForm.invalid" (click)="login()">Ingresar</button>
                     </div>
                 </div>
             </form>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { RegisterService } from 'src/app/services/register.service';
+import { ApiService } from 'src/app/services/api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Personas } from 'src/app/models/personas';
 import { TipoDocumentoIdentidad } from 'src/app/models/tipoDocumentoIdentidad';
@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   contrasena2: any;
 
   constructor(private fb: FormBuilder,
-    private register: RegisterService,
+    private register: ApiService,
     private route: Router,
     private snackBar: MatSnackBar) {
 

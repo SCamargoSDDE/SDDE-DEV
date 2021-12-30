@@ -22,6 +22,7 @@ import { EventosComponent } from './components/eventos/eventos.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ApiService } from './services/api.service';
 
 
 
@@ -40,9 +41,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FirstStartComponent,
     DirectorioComponent,
     EventosComponent,
-    NoticiasComponent,
- 
-
+    NoticiasComponent
   ],
   imports: [
     BrowserModule,

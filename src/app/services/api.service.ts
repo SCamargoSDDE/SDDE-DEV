@@ -6,11 +6,13 @@ import { Observable } from 'rxjs';
 import { Personas } from '../models/personas';
 import { TipoDocumentoIdentidad } from '../models/tipoDocumentoIdentidad';
 import { Usuarios } from '../models/usuarios';
+import { LoginForm } from '../models/login-form';
+import { JwtResponse } from '../models/jwt-response';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterService {
+export class ApiService {
 
   constructor(
     private http: HttpClient
@@ -37,4 +39,10 @@ export class RegisterService {
     return this.http.get<Cliente>(sellersUrl)
   }
   */
+
+   //login
+   public Login(loginForm: LoginForm): Observable<JwtResponse> {
+    const sellersUrl = `${environment.apiUrl}usuarios/Login`;
+    return this.http.post<JwtResponse>(sellersUrl, loginForm);
+  }
 }
