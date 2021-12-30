@@ -30,9 +30,6 @@
         </div>
 
     </div>
-
-
-
     <div class="col-12 title-form">
         <h1>Información organizacional general</h1>
     </div>
@@ -43,7 +40,7 @@
 
 
                 <div class="row mt-3">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <label class="label-form">Sector productivo </label>
                         <div class="form-control">
                             <select class="custom-select form-select" formControlName="sectorProductivo">
@@ -52,79 +49,65 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Intereses </label>
-                            <div class="form-control">
-                                <select class="custom-select form-select" formControlName="intereses">
 
-                                    <option value="Conectar con incubadoras">Conectar con incubadoras</option>
-                                    <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
-                                    <option value="Generar networking">Generar networking</option>
-                                    <option value="Encontrar inversionista">Encontrar inversionista</option>
-                                    <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
-                                    </option>
-
-
-                                </select>
-                            </div>
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Intereses </label>
+                        <div class="form-control">
+                            <select class="custom-select form-select" formControlName="intereses">
+                                <option value="Conectar con incubadoras">Conectar con incubadoras</option>
+                                <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
+                                <option value="Generar networking">Generar networking</option>
+                                <option value="Encontrar inversionista">Encontrar inversionista</option>
+                                <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
+                                </option>
+                            </select>
                         </div>
-
                     </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Número telefonico de contacto </label>
-                            <input type="text" class="form-control" formControlName="numeroTelefonicoCofundador">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Correo de contacto</label>
-                            <input type="text" class="form-control" formControlName="correoCofundador">
-                        </div>
-
-                    </div>
-                    Representante legal
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer Nombre </label>
-                            <input type="text" class="form-control" formControlName="primerNombreRepresentante">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo nombre</label>
-                            <input type="text" class="form-control" formControlName="segundoNombreRepresentante">
-                        </div>
-
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Primer apellido </label>
-                            <input type="text" class="form-control" formControlName="primerApellidoRepresentante">
-
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="label-form">Segundo apellido</label>
-                            <input type="text" class="form-control" formControlName="segundoApellidoRepresentante">
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="row mt-3">
-                        <div class="col">
-                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
-                        </div>
-
-                        <div class="col">
-                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y
-                                Continuar</button>
-                        </div>
+                    <div class="form-group col-md-4">
+                        <label class="label-form">Número de colaboradores </label>
+                        <input type="text" class="form-control" formControlName="numeroColaboradores">
                     </div>
                 </div>
+
+                <div class="row mt-3">
+                    <div class="form-group">
+                        <label>Breve descripción del emprendimiento</label>
+                        <textarea class="form-control" formControlName="descripcionEmprendimiento" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group">
+                        <label>Público objetivo (clientes y usuarios)</label>
+                        <textarea class="form-control" formControlName="publicoEmprendimiento" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group">
+                        <label>Propuesta de valor</label>
+                        <textarea class="form-control" formControlName="dpropuestaEmprendimiento" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="form-group">
+                        <label>Problema a solucionar, necesidad, oportunidad o frustación</label>
+                        <textarea class="form-control" formControlName="problemaEmprendimiento" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
+                    </div>
+
+                    <div class="col">
+                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y
+                            Continuar</button>
+                    </div>
+                </div>
+
             </form>
         </div>
 
