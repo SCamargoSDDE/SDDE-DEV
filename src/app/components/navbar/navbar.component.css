@@ -20,6 +20,14 @@ body{
     background-color: #ED1E79;
     border-radius: 4px;
 }
+.btn-fucsia-logout{
+    font-family: GothamRounded;
+    width: 180px;
+    height: 42px;
+    color: #FFFFFF;
+    background-color: #ED1E79;
+    border-radius: 4px;
+}
 
 .btn-azul{
     font-family: GothamRounded;

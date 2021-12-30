@@ -1,20 +1,23 @@
 <div class="login">
   <div class="hstack gap-3">
-    <div class="ms-auto">
-      <a class="a-unstyled" [routerLink]="['/registro']"><button type="button" class="btn btn-fucsia mt-2">
-          Registrarse</button></a>
-    </div>
-    <div class="vr mt-2"></div>
-    <div>
-      <a class="a-unstyled" [routerLink]="['/login']"><button type="button" class="btn btn-azul mt-2">Iniciar
-          sesíon</button></a>
+    <ng-template #showLogin>
+      <div class="ms-auto">
+        <a class="a-unstyled" [routerLink]="['/registro']"><button type="button" class="btn btn-fucsia mt-2">
+            Registrarse</button></a>
+      </div>
+      <div class="vr mt-2"></div>
+      <div>
+        <a class="a-unstyled" [routerLink]="['/login']"><button type="button" class="btn btn-azul mt-2">Iniciar
+            sesíon</button></a>
+      </div>
+    </ng-template>
+    
+    <div *ngIf="user != null; else showLogin" class="ms-auto">
+      <a class="a-unstyled" (click)="logout()">
+        <button type="button" class="btn btn-fucsia-logout mt-2">Cerrar sesión</button></a>
     </div>
 
     <img class="mt-2" src="./assets/icons/search.png" alt="Responsive image">
-
-    <div>
-
-    </div>
   </div>
 </div>
 
