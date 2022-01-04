@@ -73,20 +73,22 @@ export class RegisterComponent implements OnInit {
     this.tiposDocumento = success;
   }
   onErrorTipoDocumento(error: any) {
-    console.log("Servicio no consultado");
+    this.snackBar.open("Servicio 'Tipos de documento' no consultado", 'Ok!',
+      { duration: 3000 }
+    );
   }
 
   registrarse() {
-     this.correo1 = this.myForm.get('correoElectronico').value;
-     this.correo2 =  this.myForm.get('confirmacionCorreo').value;
-     this.contrasena1 = this.myForm.get('contrasena').value;
-     this.contrasena2 = this.myForm.get('confirmarContrasena').value;
+    this.correo1 = this.myForm.get('correoElectronico').value;
+    this.correo2 = this.myForm.get('confirmacionCorreo').value;
+    this.contrasena1 = this.myForm.get('contrasena').value;
+    this.contrasena2 = this.myForm.get('confirmarContrasena').value;
 
-     if(this.correo1 != this.correo2){
+    if (this.correo1 != this.correo2) {
       this.openSnackBar("El campo confirmación de corre no coincide con campo correo");
       return
     }
-    if(this.contrasena1 != this.contrasena2){
+    if (this.contrasena1 != this.contrasena2) {
       this.openSnackBar("El campo confirmación de contraseña no coincide con campo contraseña");
       return
     }

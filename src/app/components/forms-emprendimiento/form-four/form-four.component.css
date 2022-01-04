@@ -99,3 +99,34 @@
 .mat-form-field {
     margin-right: 8px;
 }
+
+/*Formacion div perfil*/
+.cont-perfil{
+    width: 100%;
+    height: 100%;
+}
+.img-profile{
+    width: 240px;
+    height: 240px;
+    background: #EDEDED;
+    border: 11px solid #ED1E79;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.ayuda {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 124.5%;
+    /* identical to box height, or 19px */
+    align-items: center;
+    letter-spacing: 0.035em;
+    color: #000000;
+}
+.rosa{
+    color: #ED1E79;
+}
+.azul{
+    color: #29ABE2;
+}
+/*FIN Formacion div perfil*/

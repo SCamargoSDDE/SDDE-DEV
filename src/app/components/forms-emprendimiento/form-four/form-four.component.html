@@ -23,7 +23,6 @@
         <div class="form-group col-md-6">
             <label class="label-form">Estas a pocos pasos de ser parte de nuestro ecosistema</label>
             <label class="label-form">Progreso general</label>
-
         </div>
         <div class="logos m-5">
             <img src="./assets/img/99porciento.png" class="img-fluid" alt="Responsive image">
@@ -33,254 +32,281 @@
     <div class="col-12 title-form">
         <h1>Información organizacional y financiera</h1>
     </div>
-    <div class="row mt-5">
-        <div class="col-8 col-md-12">
+    <div class="mt-5">
+        <form [formGroup]="myForm" autocomplete="off">
+            <div class="row">
+                <div class="col-8 col-md-8">
 
-            <form [formGroup]="myForm" autocomplete="off">
-
-
-                <div class="row mt-3">
-                    <div class="form-group col-md-4">
-                        <label class="label-form">Logo</label>
-                        <div class="input-group">
-                            <input type="file" class="form-control" id="inputGroupFile04"
-                                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                            <button class="btn btn-outline-secondary" type="button"
-                                id="inputGroupFileAddon04"formControlName="logo" >Button</button>
+                    <div class="row mt-3">
+                        <div class="form-group col-md-4">
+                            <label class="label-form">Logo</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"
+                                    formControlName="logo">Button</button>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group col-md-4">
-                        <label class="label-form">Número de colaboradores </label>
-                        <input type="text" class="form-control" formControlName="numeroColaboradores">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label class="label-form">Intereses </label>
+                        <div class="form-group col-md-4">
+                            <label class="label-form">Número de colaboradores </label>
+                            <input type="text" class="form-control" formControlName="numeroColaboradores">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="label-form">Intereses </label>
 
-                        <select class="custom-select form-select" formControlName="intereses">
-                            <option value="Conectar con incubadoras">Conectar con incubadoras</option>
-                            <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
-                            <option value="Generar networking">Generar networking</option>
-                            <option value="Encontrar inversionista">Encontrar inversionista</option>
-                            <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
-                            </option>
-                        </select>
-
-                    </div>
-                </div>
-
-
-                <div class="row mt-3">
-
-                    <div class="form-group col-md-4">
-                        <div>
-                            <label class="label-form">Cuenta con matrícula mercantil</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="matriculaMercantil">
-                                <label class="form-check-label" for="flexRadioDefault1" value="Si">
-                                    Si
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
-                                <label class="form-check-label" for="flexRadioDefault2" value="No">
-                                    No
-                                </label>
-                            </div>
+                            <select class="custom-select form-select" formControlName="intereses">
+                                <option value="Conectar con incubadoras">Conectar con incubadoras</option>
+                                <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
+                                <option value="Generar networking">Generar networking</option>
+                                <option value="Encontrar inversionista">Encontrar inversionista</option>
+                                <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
+                                </option>
+                            </select>
 
                         </div>
                     </div>
 
-                    <div class="form-group col-md-8">
-                        <div>
-                            <label class="label-form">Cuenta con el Registro de información Tributaria RIT (Es el mecanismo de identificación, ubicación y clasificación de los contribuyentes del Impuesto de Industria y Comercio, Avisos y Tableros).</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="informacionTributaria">
-                                <label class="form-check-label" for="flexRadioDefault1" value="Si">
-                                    Si
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="informacionTributaria" checked>
-                                <label class="form-check-label" for="flexRadioDefault2" value="No">
-                                    No
-                                </label>
-                            </div>
 
+                    <div class="row mt-3">
+
+                        <div class="form-group col-md-4">
+                            <div>
+                                <label class="label-form">Cuenta con matrícula mercantil</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="matriculaMercantil">
+                                    <label class="form-check-label" for="flexRadioDefault1" value="Si">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2" value="No">
+                                        No
+                                    </label>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="form-group">
-                        <label>¿En caso tal de no estar formalizado cual es el motivo? (máximo 100 palabras)</label>
-                        <textarea class="form-control" formControlName="motivoNoFormalizacion" rows="3"></textarea>
-                    </div>
-                </div>
 
-                <div class="row mt-3">
-                    <div class="form-group col-md-12">
-                        <label class="label-form">¿Con cuál actividad economica se identifica su empresa o
-                            emprendimiento?</label>
-                        <select class="custom-select form-select" formControlName="actividadEconomica">
-                            <option value="Conectar con incubadoras">Conectar con incubadoras</option>
-                            <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
-                            <option value="Generar networking">Generar networking</option>
-                            <option value="Encontrar inversionista">Encontrar inversionista</option>
-                            <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
-                            </option>
-                        </select>
-
-                    </div>
-                </div>
-                <div class="row mt-3">
-
-                    <div class="form-group col-md-6">
-
-                        <div>
-                            <label class="label-form">¿De donde provienen los insumos y materias primas para la
-                                producción
-                                de su bien o servicio?</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="provienenInsumos">
-                                <label class="form-check-label" for="flexRadioDefault1" value="Empresas Nacionales">
-                                    Empresas Nacionales
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="provienenInsumos" checked>
-                                <label class="form-check-label" for="flexRadioDefault2" value="Empresas internacionales">
-                                    Empresas internacionales
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="provienenInsumos" value="Campesinos">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Campesinos
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="provienenInsumos" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Otra
-                                </label>
-                                <label class="label-form">¿Cual?</label>
-                                <input type="text" class="form-control"
-                                    formControlName="provienenInsumos">
+                        <div class="form-group col-md-8">
+                            <div>
+                                <label class="label-form">Cuenta con el Registro de información Tributaria RIT (Es el
+                                    mecanismo de identificación, ubicación y clasificación de los contribuyentes del
+                                    Impuesto de Industria y Comercio, Avisos y Tableros).</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="informacionTributaria">
+                                    <label class="form-check-label" for="flexRadioDefault1" value="Si">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="informacionTributaria" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2" value="No">
+                                        No
+                                    </label>
+                                </div>
 
                             </div>
                         </div>
                     </div>
+                    <div class="row mt-3">
+                        <div class="form-group">
+                            <label>¿En caso tal de no estar formalizado cual es el motivo? (máximo 100 palabras)</label>
+                            <textarea class="form-control" formControlName="motivoNoFormalizacion" rows="3"></textarea>
+                        </div>
+                    </div>
 
-                    <div class="form-group col-md-6">
+                    <div class="row mt-3">
+                        <div class="form-group col-md-12">
+                            <label class="label-form">¿Con cuál actividad economica se identifica su empresa o
+                                emprendimiento?</label>
+                            <select class="custom-select form-select" formControlName="actividadEconomica">
+                                <option value="Conectar con incubadoras">Conectar con incubadoras</option>
+                                <option value="Encontrar Aceleradora">Encontrar Aceleradora</option>
+                                <option value="Generar networking">Generar networking</option>
+                                <option value="Encontrar inversionista">Encontrar inversionista</option>
+                                <option value="Promocionar productos/ servicios">Promocionar productos/ servicios
+                                </option>
+                            </select>
 
-                        <div>
-                            <label class="label-form">Sus colaboradores se encuentran afiliados al sistema de seguridad
-                                social (pensiones, salud, riegos laborales, subsidio familair )</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="afiliadionSeguridadSocial">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    No
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="afiliadionSeguridadSocial" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Si, beneficiario
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="afiliadionSeguridadSocial">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Si, cotizante
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Afiliado al SISBEN
-                                </label>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
 
+                        <div class="form-group col-md-6">
+
+                            <div>
+                                <label class="label-form">¿De donde provienen los insumos y materias primas para la
+                                    producción
+                                    de su bien o servicio?</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="provienenInsumos">
+                                    <label class="form-check-label" for="flexRadioDefault1" value="Empresas Nacionales">
+                                        Empresas Nacionales
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="provienenInsumos" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2"
+                                        value="Empresas internacionales">
+                                        Empresas internacionales
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="provienenInsumos" value="Campesinos">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Campesinos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="provienenInsumos" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Otra
+                                    </label>
+                                    <label class="label-form">¿Cual?</label>
+                                    <input type="text" class="form-control" formControlName="provienenInsumos">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <div>
+                                <label class="label-form">Sus colaboradores se encuentran afiliados al sistema de
+                                    seguridad
+                                    social (pensiones, salud, riegos laborales, subsidio familair )</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="afiliadionSeguridadSocial">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="afiliadionSeguridadSocial" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Si, beneficiario
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="afiliadionSeguridadSocial">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Si, cotizante
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Afiliado al SISBEN
+                                    </label>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+
+                        <div class="form-group col-md-6">
+
+                            <div>
+                                <label class="label-form">¿Utiliza formas de seguimiento contable? (lleva libros de
+                                    contabiliad, entre otros)</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="matriculaMercantil">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <div>
+                                <label class="label-form">¿Utiliza medios de pago digital? (tranferencia
+                                    bancaria,datafono,
+                                    nequi, daviplara, codigo Qr)</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="matriculaMercantil">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
 
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row mt-3">
-
-                    <div class="form-group col-md-6">
-
-                        <div>
-                            <label class="label-form">¿Utiliza formas de seguimiento contable? (lleva libros de
-                                contabiliad, entre otros)</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="matriculaMercantil">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Si
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    No
-                                </label>
-                            </div>
-
+                    <div class="row mt-3">
+                        <div class="col">
+                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
                         </div>
-                    </div>
 
-                    <div class="form-group col-md-6">
-
-                        <div>
-                            <label class="label-form">¿Utiliza medios de pago digital? (tranferencia bancaria,datafono,
-                                nequi, daviplara, codigo Qr)</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" formControlName="matriculaMercantil">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Si
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" formControlName="matriculaMercantil" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    No
-                                </label>
-                            </div>
-
+                        <div class="col">
+                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y
+                                Finalizar</button>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col">
-                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
-                    </div>
+                <div class="col-4 col-md-4">
+                    <div class="container cont-perfil"> 
+                        <div class="img-profile">
+                            <img src="" alt="">
+                        </div>
 
-                    <div class="col">
-                        <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y Finalizar</button>
+                        <div class="file mt-2">
+                            <input type="file" name="" id="" value="epe">
+                        </div>
+
+                        <div class="progres mt-4">
+                            <h5>Has completado el </h5>
+                            <div>
+                                <img src="./assets/img/35porciento.png" class="img-fluid" alt="Responsive image">
+                            </div>
+                            <h5 class="mt-2">De tu perfil</h5>
+                        </div>
+                        <hr>
+                        <div class="footer">
+                            <h6 class="ayuda"> ¿Necesitas ayuda?</h6>
+                            <h6 class="ayuda">Visita nuestro <span class="azul"> centro de ayuda </span> o escribenos un correo a <span class="rosa">info@bogotae.gov.co</span> </h6>
+                        </div>
                     </div>
                 </div>
-
-            </form>
-        </div>
-
-        <div class="col-4 col-md-12">
-            <div style="background-color: black; width: 100%;"></div>
-        </div>
+            </div>
+        </form>
     </div>
 
+    <div class="col-4 col-md-12">
+        <div style="background-color: black; width: 100%;"></div>
+    </div>
 </div>

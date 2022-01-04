@@ -22,7 +22,6 @@
         <div class="form-group col-md-6">
             <label class="label-form">Estas a pocos pasos de ser parte de nuestro ecosistema</label>
             <label class="label-form">Progreso general</label>
-
         </div>
         <div class="logos m-5">
             <img src="./assets/img/35porciento.png" class="img-fluid" alt="Responsive image">
@@ -274,7 +273,7 @@
                             <label class="label-form">Localidad *</label>
                             <div class="form-control">
                                 <select class="custom-select form-select" formControlName="localidadEmprendimiento">
-                                    <option>
+                                    <option *ngFor="let item of localidades" [value]="item.locaId"> {{item.locaNombre}}
                                     </option>
                                 </select>
                             </div>
@@ -351,7 +350,7 @@
                 </div>
 
                 <div class="col-4 col-md-4">
-                    <div class="container cont-perfil"> 
+                    <div class="container cont-perfil">
                         <div class="img-profile">
                             <img src="" alt="">
                         </div>
@@ -370,7 +369,8 @@
                         <hr>
                         <div class="footer">
                             <h6 class="ayuda"> ¿Necesitas ayuda?</h6>
-                            <h6 class="ayuda">Visita nuestro <span class="azul"> centro de ayuda </span> o escribenos un correo a <span class="rosa">info@bogotae.gov.co</span> </h6>
+                            <h6 class="ayuda">Visita nuestro <span class="azul"> centro de ayuda </span> o escribenos un
+                                correo a <span class="rosa">info@bogotae.gov.co</span> </h6>
                         </div>
                     </div>
                 </div>
