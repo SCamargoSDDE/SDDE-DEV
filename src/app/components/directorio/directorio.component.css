@@ -20,10 +20,11 @@
 }
 
 .title-page {
+    width: max-content;
     font-family: GothamRounded;
     font-style: normal;
     font-weight: 325;
-    line-height: 66px;
+    line-height: 50px;
     color: #FFFFFF;
 }
 
