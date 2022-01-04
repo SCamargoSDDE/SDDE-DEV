@@ -5,6 +5,7 @@
 
 .container {
     font-family: GothamRounded;
+    text-align: center;
 }
 
 /* CSS header menu navegacion*/
@@ -55,28 +56,18 @@
 
 /* FIN CSS header menu navegacion*/
 
-.title-form {
+.h-azul{
     font-family: GothamRounded;
     font-style: normal;
     font-weight: bold;
-    font-size: 22px;
-    line-height: 21px;
-    align-items: center;
-    text-align: center;
-    /* Gris contenedor oscuro */
-    color: #656565;
+    line-height: 45px;
+    color: #29ABC2;
 }
-
-.form-body {
-    align-items: center;
-}
-
-.label-form {
+.h-fucsia{
     font-family: GothamRounded;
     font-style: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #656565;
+    line-height: 45px;
+    color: #ED1E79;
 }
 
 .btn-azul {
@@ -88,46 +79,20 @@
     border-radius: 4px;
 }
 
-.form-select {
-    border: none;
-}
-
-/*validaciones*/
-.mda-form-msg {
-    color: #f44336;
-}
-
-.mat-form-field {
-    margin-right: 8px;
-}
-
-/*Formacion div perfil*/
-.cont-perfil{
+.btn-fucsia {
+    font-family: GothamRounded;
     width: 100%;
-    height: 100%;
-}
-.img-profile{
-    width: 240px;
-    height: 240px;
-    background: #EDEDED;
-    border: 11px solid #ED1E79;
-    border-radius: 100%;
-    margin: auto;
+    height: 42px;
+    color: #FFFFFF;
+    background-color: #ED1E79;
+    border-radius: 4px;
 }
 
-.ayuda {
-    font-style: normal;
-    font-weight: 300;
-    line-height: 124.5%;
-    /* identical to box height, or 19px */
-    align-items: center;
-    letter-spacing: 0.035em;
-    color: #000000;
+.btn-azul {
+    font-family: GothamRounded;
+    width: 100%;
+    height: 42px;
+    color: #FFFFFF;
+    background-color: #29ABC2;
+    border-radius: 4px;
 }
-.rosa{
-    color: #ED1E79;
-}
-.azul{
-    color: #29ABE2;
-}
-/*FIN Formacion div perfil*/
