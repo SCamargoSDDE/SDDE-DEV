@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { LoginService } from 'src/app/auth/login.service';
 import { JwtResponse } from 'src/app/models/jwt-response';
 import { LoginForm } from 'src/app/models/login-form';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-login',
@@ -19,35 +21,47 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private loginService: LoginService,
     private router: Router,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private modalService: NgbModal,
+    config: NgbModalConfig, 
   ) {
     this.myForm = this.fb.group({
       usuaUsuario: ['', [Validators.required]],
       usuaContrasenia: ['', Validators.required]
     });
+
+    //se agrega para que la modal no se disminuya al click
+    config.backdrop = 'static';
+    config.keyboard = false;
   }
 
   ngOnInit(): void {
 
   }
 
-  login(): void {
+  login(content:any) {
     const value = this.myForm.value;
-
+    
+    //abrimos modal de carga
+    this.openModal(content);
+    
     this.loginService.login(value).subscribe(
       (success => this.onSubmitSuccess(success)),
       (error => this.onSubmitError(error))
     );
+
+    //Cerramos modal cuando termina la solicitud
+    this.modalService.dismissAll();
   }
 
   onSubmitSuccess(jwtResponse: JwtResponse) {
+
     this.loginService.loginSuccess(jwtResponse);
     console.log(jwtResponse);
     this.router.navigate(['/primerInicio']);
   }
 
   onSubmitError(error: any) {
-    console.log(error);
     this.openSnackBar("Usuario o contraseña incorrecto")
     /*if (error.status === 401) {
       this.toastr.danger('Usuario o contraseña invalidos', 'Login', { duration: 0 });
@@ -55,7 +69,6 @@ export class LoginComponent implements OnInit {
       this.toastr.danger('Usuario o contraseña invalidos', 'Login', { duration: 0 });
     }*/
   }
-
 
   onAgregarError(error: any) {
     this.openSnackBar(error.error.mensaje)
@@ -65,5 +78,13 @@ export class LoginComponent implements OnInit {
     this.snackBar.open(message, 'Ok!',
       { duration: 3000 }
     );
+  }
+
+  //Metodo de apertura de carga apra las modales 
+  openModal(content:any) {
+    this.modalService.open(content, {  
+      centered: true, 
+      size: 'sm'
+    });
   }
 }
