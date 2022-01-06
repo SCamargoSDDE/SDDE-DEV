@@ -9,7 +9,10 @@ export class JwtInterceptor implements HttpInterceptor {
   constructor(private login: LoginService) {
   }
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(
+    request: HttpRequest<unknown>, 
+    next: HttpHandler): Observable<HttpEvent<unknown>> {
+      
     const currentUser = this.login.currentUserValue;
     if (currentUser && currentUser.token) {
       request = request.clone({

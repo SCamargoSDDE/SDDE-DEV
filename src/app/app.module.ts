@@ -14,7 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
 
 /*Import para formularios*/
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegistrationOkComponent } from './components/registration-ok/registration-ok.component';
 import { FirstStartComponent } from './components/first-start/first-start.component';
 import { DirectorioComponent } from './components/directorio/directorio.component';
@@ -26,6 +26,8 @@ import { ApiService } from './services/api.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalSpinnerComponent } from './components/modal-spinner/modal-spinner.component';
+import { JwtInterceptor } from './auth/jwt.interceptor';
+import { ErrorInterceptor } from './auth/error.interceptor';
 
 
 
@@ -58,7 +60,10 @@ import { ModalSpinnerComponent } from './components/modal-spinner/modal-spinner.
     MatProgressSpinnerModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
