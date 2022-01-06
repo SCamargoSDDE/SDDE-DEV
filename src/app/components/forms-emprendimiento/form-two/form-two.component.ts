@@ -18,6 +18,7 @@ export class FormTwoComponent implements OnInit {
     private snackBar: MatSnackBar) {
 
     this.myForm = this.fb.group({
+      numeroCofundadoresEmprendimiento : ['', [Validators.required]],
       primerNombreCofundador1: ['', [Validators.required]],
       segundoNombreCofundador1: ['',[]],
       primerApellidoCofundador1: ['', [Validators.required]],

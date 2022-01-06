@@ -92,6 +92,10 @@
     border: none;
 }
 
+.coFundador{
+    border-color: rgb(201, 76, 76);
+}
+
 /*validaciones*/
 .mda-form-msg {
     color: #f44336;
@@ -132,3 +136,4 @@
     color: #29ABE2;
 }
 /*FIN Formacion div perfil*/
+
