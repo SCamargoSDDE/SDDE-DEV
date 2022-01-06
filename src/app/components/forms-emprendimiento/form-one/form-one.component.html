@@ -39,38 +39,39 @@
 
                     <div class="row mt-3">
 
-                        <div class="form-group col-md-12 col-sm-6 col-">
-                            <label class="label-form">¿El negocio que esta registrando esta legalmente constituido?
-                                *</label>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="emplendimientoConstituido"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Si
-                                </label>
+                        
+                        <div class="form-group col-md-12">
+                            <div>
+                                <label class="label-form">¿El negocio que esta registrando esta legalmente constituido? *</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" formControlName="emplendimientoConstituido">
+                                    <label class="form-check-label" for="flexRadioDefault1" value="Si">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" formControlName="emplendimientoConstituido" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2" value="No">
+                                        No
+                                    </label>
+                                </div>
 
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" formControlName="emplendimientoConstituido"
-                                    id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    No
-                                </label>
-                            </div>
-
                         </div>
                     </div>
 
 
+
                     <div class="row mt-3">
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-7">
                             <label class="label-form">Nombre de la empresa o emprendimiento </label>
                             <input type="text" class="form-control" formControlName="nombreEmprendimiento">
 
                         </div>
-                        <div class="form-group col-md-4">
-                            <label class="label-form">Cedula o Nit</label>
+                        <div class="form-group col-md-2">
+                            <label class="label-form">CC o Nit</label>
                             <input type="text" class="form-control" formControlName="nitEmprendimiento">
                         </div>
                         <div class="form-group col-md-3">
@@ -337,9 +338,7 @@
 
 
                     <div class="row mt-3">
-                        <div class="col">
-                            <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar</button>
-                        </div>
+                       
 
                         <div class="col">
                             <button type="submit" class="btn btn-azul mt-4" [disabled]="myForm.invalid">Guardar y

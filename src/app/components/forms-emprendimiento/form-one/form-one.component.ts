@@ -25,7 +25,7 @@ export class FormOneComponent implements OnInit {
     this.myForm = this.fb.group({
       emplendimientoConstituido: ['', [Validators.required]],
       nombreEmprendimiento: ['', [Validators.required]],
-      nitEmprendimiento: ['', [Validators.required]],
+      nitEmprendimiento: ['', []],
       fechaCreacionEmprendimiento: ['', []],
       c1: ['', [Validators.required]],
       c2: ['', [Validators.required]],
@@ -37,9 +37,10 @@ export class FormOneComponent implements OnInit {
       c8: ['', []],
       c9: ['', []],
       c10: ['', []],
+      localidadEmprendimiento:['', [Validators.required]],
       correoElectronicoEmprendimiento: ['', [Validators.required, Validators.email]],
-      confirmacionCorreoEmprendimiento: ['', [Validators.required, Validators.email]],
-      sitioWebEmprendimiento: ['', [Validators.required]],
+      confirmacionCorreoEmprendimiento: ['', []],
+      sitioWebEmprendimiento: ['', []],
       numeroTelefonicoEmprendimiento: ['', [Validators.required]],
       numeroTelefonicoAlternativoEmprendimiento: ['', []]
     });
