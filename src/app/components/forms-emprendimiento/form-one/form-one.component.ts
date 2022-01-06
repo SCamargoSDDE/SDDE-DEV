@@ -48,7 +48,7 @@ export class FormOneComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.consultarLocalidades();
+   // this.consultarLocalidades();
   }
 
   consultarLocalidades() {
@@ -70,7 +70,20 @@ export class FormOneComponent implements OnInit {
 
   guardar() {
     const formValue = this.myForm.value;
+    let correo = formValue.correoElectronicoEmprendimiento;
+    let confirmCorreo = formValue.confirmacionCorreoEmprendimiento;
+
+    if (correo != confirmCorreo) {
+      this.openSnackBar("El campo confirmación de corre no coincide con campo correo");
+      return
+    }
     console.log(formValue)
   }
 
+
+  openSnackBar(message: string) {
+    this.snackBar.open(message, 'Ok!',
+      { duration: 3000 }
+    );
+  }
 }

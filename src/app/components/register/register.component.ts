@@ -73,9 +73,7 @@ export class RegisterComponent implements OnInit {
     this.tiposDocumento = success;
   }
   onErrorTipoDocumento(error: any) {
-    this.snackBar.open("Servicio 'Tipos de documento' no consultado", 'Ok!',
-      { duration: 3000 }
-    );
+    this.openSnackBar("Servicio 'Tipos de documento' no consultado");
   }
 
   registrarse() {
