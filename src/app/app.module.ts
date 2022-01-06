@@ -23,6 +23,10 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ApiService } from './services/api.service';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalSpinnerComponent } from './components/modal-spinner/modal-spinner.component';
+
 
 
 
@@ -41,7 +45,8 @@ import { ApiService } from './services/api.service';
     FirstStartComponent,
     DirectorioComponent,
     EventosComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    ModalSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,9 @@ import { ApiService } from './services/api.service';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,22 +3,23 @@
     src: url('../../../assets/fonts/GothamRounded.ttf') format('truetype');
 }
 
-.container{
+.container {
     font-family: GothamRounded;
 }
+
 /* CSS header menu navegacion*/
-.rectangle{
+.rectangle {
     background-color: #ED1E79;
     width: 100%;
     height: 220px;
 }
 
-.header{
+.header {
     width: 50%;
     position: absolute;
 }
 
-.title-page{
+.title-page {
     font-family: GothamRounded;
     font-style: normal;
     font-weight: 325;
@@ -26,30 +27,34 @@
     color: #FFFFFF;
 }
 
-.menu{
+.menu {
     margin: auto;
     color: #FFFFFF;
 }
-.link-menu{
+
+.link-menu {
     text-decoration: none;
 }
-.img-menu{
+
+.img-menu {
     margin-top: -5px;
-    width:20;
-    height:20;
+    width: 20;
+    height: 20;
 }
-.text-span{
+
+.text-span {
     font-family: GothamRounded;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 15px;
     color: #FFFFFF;
-    
+
 }
+
 /* CSS header menu navegacion*/
 
-.title-form{
+.title-form {
     font-family: GothamRounded;
     font-style: normal;
     font-weight: bold;
@@ -60,10 +65,12 @@
     /* Gris contenedor oscuro */
     color: #656565;
 }
-.form-body{
+
+.form-body {
     align-items: center;
 }
-.label-form{
+
+.label-form {
     font-family: GothamRounded;
     font-style: normal;
     font-size: 18px;
@@ -71,7 +78,7 @@
     color: #656565;
 }
 
-.btn-azul{
+.btn-azul {
     font-family: GothamRounded;
     width: 100%;
     height: 42px;
@@ -80,30 +87,34 @@
     border-radius: 4px;
 }
 
-.btn-fucsia-btn{
+.btn-fucsia-btn {
     color: #ED1E79;
-    text-decoration:none;
+    text-decoration: none;
     border: none;
-}
-.fucsia-text{
-    font-family: GothamRounded;
-    color: #ED1E79;
-    text-decoration:none;
-}
-.btn-azul-btn{
-    color: #29ABE2;
-    border: none;
-    text-decoration:none;
-}
-.azul-text{
-    font-family: GothamRounded;
-    color: #29ABE2;
-    text-decoration:none;
-}
-.a-unstyled{
-    text-decoration:none;
 }
 
-.center-col{
+.fucsia-text {
+    font-family: GothamRounded;
+    color: #ED1E79;
+    text-decoration: none;
+}
+
+.btn-azul-btn {
+    color: #29ABE2;
+    border: none;
+    text-decoration: none;
+}
+
+.azul-text {
+    font-family: GothamRounded;
+    color: #29ABE2;
+    text-decoration: none;
+}
+
+.a-unstyled {
+    text-decoration: none;
+}
+
+.center-col {
     text-align: center;
 }
