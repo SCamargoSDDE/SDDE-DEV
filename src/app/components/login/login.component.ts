@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private snackBar: MatSnackBar,
     private modalService: NgbModal,
-    config: NgbModalConfig, 
+    config: NgbModalConfig
   ) {
     this.myForm = this.fb.group({
       usuaUsuario: ['', [Validators.required]],

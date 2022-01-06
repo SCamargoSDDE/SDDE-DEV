@@ -30,14 +30,14 @@ export class ApiService {
     });
   }
 
-    //tipos de documentos utilizados en los formularios de registro
-    getLocalidades(): Observable<Localidades[]> {
-      let header = new HttpHeaders().set('Tipe-content', 'aplication/json')
-      const sellersUrl = `${environment.apiUrl}localidades`;
-      return this.http.get<Localidades[]>(sellersUrl, {
-        headers: header
-      });
-    }
+  //tipos de documentos utilizados en los formularios de registro
+  getLocalidades(): Observable<Localidades[]> {
+    let header = new HttpHeaders().set('Tipe-content', 'aplication/json')
+    const sellersUrl = `${environment.apiUrl}localidades`;
+    return this.http.get<Localidades[]>(sellersUrl, {
+      headers: header
+    });
+  }
 
 
 
@@ -47,8 +47,8 @@ export class ApiService {
   }
 
   //le falta validar , no fiarse
-  formularioUnoEmpredimiento(formulario: Emprendimientos): Observable<Emprendimientos> {
-    const sellersUrl = `${environment.apiUrl}formularioUno`;
+  fromularioEmprendimiento(formulario: Emprendimientos): Observable<Emprendimientos> {
+    const sellersUrl = `${environment.apiUrl}emprendimientos`;
     return this.http.post<Emprendimientos>(sellersUrl, formulario);
   }
 

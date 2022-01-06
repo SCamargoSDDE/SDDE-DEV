@@ -9,6 +9,7 @@ import { TiposIntereses } from "./tiposIntereses";
 
 export class Emprendimientos {
     emprId: number;
+    //emprConstituido: string;
     emprNombre: string;
     emprDescripcion: string;
     emprEstado: string;

@@ -23,7 +23,7 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ApiService } from './services/api.service';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalSpinnerComponent } from './components/modal-spinner/modal-spinner.component';
 

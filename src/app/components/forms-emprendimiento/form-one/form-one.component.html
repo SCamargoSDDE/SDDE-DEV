@@ -291,13 +291,13 @@
 
                         <div class="form-group col-md-4">
                             <label class="label-form">Confirmar Correo electrónico</label>
-                            <input type="text" class="form-control" formControlName="confirmacionCorreoEmprendimiento">
+                            <input type="text" class="form-control" formControlName="emprCorreoElectronicAlterno">
                             <!-- Validaciones de formulario -->
-                            <div *ngIf="myForm.get('confirmacionCorreoEmprendimiento').hasError('required') && myForm.get('confirmacionCorreoEmprendimiento').touched"
+                            <div *ngIf="myForm.get('emprCorreoElectronicAlterno').hasError('required') && myForm.get('emprCorreoElectronicAlterno').touched"
                                 style="margin-top: -20px;">
                                 <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
                             </div>
-                            <div *ngIf="myForm.get('confirmacionCorreoEmprendimiento').hasError('email') && myForm.get('confirmacionCorreoEmprendimiento').touched"
+                            <div *ngIf="myForm.get('emprCorreoElectronicAlterno').hasError('email') && myForm.get('emprCorreoElectronicAlterno').touched"
                                 style="margin-top: -20px;">
                                 <span class="mda-form-msg">Correo <strong>no valido</strong></span>
                             </div>
@@ -365,3 +365,7 @@
         </form>
     </div>
 </div>
+
+<!--<ng-template #content>
+    <app-modal-spinner></app-modal-spinner>
+</ng-template>-->
