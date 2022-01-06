@@ -4,7 +4,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/auth/login.service';
 import { JwtResponse } from 'src/app/models/jwt-response';
-import { LoginForm } from 'src/app/models/login-form';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
